@@ -2,31 +2,16 @@
 <html lang="ja">
 
 <head>
-    <!-- ============================= -->
-    <!-- Basic Meta -->
-    <!-- ============================= -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- ============================= -->
-    <!-- SEO Meta -->
-    <!-- ============================= -->
-    <title>サービス名 | 会社名</title>
-    <meta name="description" content="サービスの説明文を120〜160文字で記載します。検索結果に表示される重要な文章です。">
-    <!-- <link rel="canonical" href="https://example.com/"> -->
-
-    <!-- OGP (optional but recommended) -->
-    <meta property="og:title" content="サービス名 | 会社名">
-    <meta property="og:description" content="サービスの説明文を120〜160文字で記載します。">
+    <title>三洋工業 | E-Simulation</title>
+    <meta name="description" content="三洋工業のE-Simulation。地震動を高精度に再現し、建設・研究現場の評価と検証を支援します。設備紹介・試験プロセス・お問い合わせはこちら。">
+    <link rel="canonical" href="https://example.com/e-simulation/">
+    <meta property="og:title" content="Tested.Safely｜三洋工業 E-Simulation">
+    <meta property="og:description" content="地震動を高精度に再現する三洋工業のE-Simulationサービス紹介ページ。">
     <meta property="og:type" content="website">
-    <!-- <meta property="og:url" content="https://example.com/">
-    <meta property="og:image" content="https://example.com/ogp.jpg"> -->
-
-    <!-- Favicon -->
-    <!-- <link rel="icon" href="/favicon.ico"> -->
-
-    <!-- Preload Critical CSS -->
+    <meta property="og:url" content="https://example.com/e-simulation/">
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
 
@@ -56,8 +41,81 @@
     </noscript> -->
     <!-- End Google Tag Manager (noscript) -->
 
-      <!-- JS: defer để không block rendering -->
-  <script src="js/main.js" defer></script>
+    <!-- JS: defer để không block rendering -->
+
+    <!-- ===== Header ===== -->
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo">
+                <img src="./assets/images/logo-big.jpg" alt="三洋工業ロゴ">
+            </div>
+
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">試験機の仕様</a></li>
+                    <li><a href="#">試験映像</a></li>
+                    <li><a href="#">施設内容</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-buttons">
+                <a href="#" class="btn btn-light">リーフレットダウンロード</a>
+                <a href="#" class="btn btn-primary">お問い合わせ</a>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- ===== Hero Section ===== -->
+    <main>
+        <section class="hero">
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <p class="hero-subtitle">Trusted & Safety</p>
+                <p class="hero-tagline">安全と信頼で次世代へ繋ぐ 明日を作る</p>
+
+                <h1 class="hero-title">
+                    地震動を高精度に再現
+                </h1>
+
+                <p class="hero-description">
+                    25㎡（5m×5m）のテーブル上で、三軸同時加振による<br>
+                    大規模な振動試験が可能です。大型の資機材に実地震波を<br>
+                    入力した試験にも対応できます。
+                </p>
+
+                <div class="hero-bottom">
+                    <p class="machine-type">三次元振動試験機</p>
+                    <p class="machine-type">イーシュミレーション</p>
+                    <h2 class="machine-name">E-Simulation</h2>
+
+                    <a href="#" class="btn btn-accent">
+                        <div class="btn-text">
+                            <span class="btn-main">試験の相談をする</span>
+                            <span class="coming">
+                                Coming Soon
+                                <span class="arrow-circle">></span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <span>SCROLL</span>
+            </div>
+
+            <div class="hero-notice">
+                <p>
+                    2026.X.XX　三次元振動試験機「E-Simulation」のサイトを公開しました。
+                </p>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="js/main.js" defer></script>
 </body>
 
 </html>
