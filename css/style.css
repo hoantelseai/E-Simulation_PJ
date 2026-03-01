@@ -7,7 +7,6 @@
   --accent: #e6483d;
   --light-blue: #4db3d3;
   --white: #ffffff;
-  
 }
 
 * {
@@ -30,7 +29,6 @@ body {
    Header
 ============================= */
 
-
 .header {
   position: fixed;
   top: 1vw;
@@ -48,10 +46,10 @@ body {
   padding: 1vw 2vw;
   border-radius: 0.8vw;
 
-  width: 94vw;                 /* gần 1880 trên màn 1920 */
+  width: 94vw; /* gần 1880 trên màn 1920 */
   max-width: 1880px;
 
-  height: clamp(60px, 4.1vw, 80px);  /* ~79px theo figma */
+  height: clamp(60px, 4.1vw, 80px); /* ~79px theo figma */
 }
 
 .logo img {
@@ -67,10 +65,10 @@ body {
 
 .nav a {
   text-decoration: none;
-   color: #4B4B4B;
+  color: #4b4b4b;
   font-size: clamp(14px, 0.78vw, 15px);
   font-weight: 600;
-   letter-spacing: 0.11em;
+  letter-spacing: 0.11em;
 }
 
 .header-buttons {
@@ -91,8 +89,8 @@ body {
 }
 
 .btn-light {
-  background: #2EA4CF;
-  color: #FFFFFF;
+  background: #2ea4cf;
+  color: #ffffff;
 
   width: clamp(180px, 10.8vw, 210px);
   height: clamp(40px, 2.4vw, 46px);
@@ -106,8 +104,8 @@ body {
 }
 
 .btn-primary {
-  background: #005BA7;
-  color: #FFFFFF;
+  background: #005ba7;
+  color: #ffffff;
 
   width: clamp(160px, 9.7vw, 187px);
   height: clamp(40px, 2.3vw, 45px);
@@ -118,7 +116,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 /* =============================
@@ -139,7 +136,7 @@ body {
   padding: 8vw 5vw 5vw 5vw; /* top padding lớn hơn header */
   display: flex;
   align-items: center;
-   background: url("../assets/images/005.jpg") center/cover no-repeat;
+  background: url("../assets/images/005.jpg") center/cover no-repeat;
 }
 
 .hero-overlay {
@@ -199,8 +196,8 @@ body {
 }
 
 .btn-accent {
-  background: #DA5151;
-  color: #FFFFFF;
+  background: #da5151;
+  color: #ffffff;
 
   width: clamp(320px, 25.7vw, 493px);
   height: clamp(56px, 3.7vw, 71px);
@@ -238,8 +235,9 @@ body {
   width: clamp(26px, 1.8vw, 36px);
   height: clamp(26px, 1.8vw, 36px);
 
-  background: #FFFFFF;
-  color: #DA5151;
+  background: #ffffff;
+  border: 2px solid #005ba7;
+  color: #005ba7;
 
   border-radius: 50%;
 
@@ -259,7 +257,6 @@ body {
   font-size: clamp(10px, 0.8vw, 14px);
   letter-spacing: 0.2em;
 }
-
 
 /* .hero-notice {
   position: absolute;
@@ -292,4 +289,875 @@ body {
 .hero-notice p {
   color: #333;
   font-size: clamp(12px, 1vw, 16px);
+}
+
+/* =============================
+   Products Section
+============================= */
+
+.products {
+  position: relative;
+  padding: 8vw 0vw 12vw 0vw;
+  background: url("../assets/images/Vector\ 80.png") center/cover no-repeat;
+  overflow: hidden;
+}
+
+/* grid background pattern */
+/* .products::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+} */
+
+.products::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+
+  background-size: 40px 40px; /* chỉnh ô caro tại đây */
+
+  pointer-events: none;
+  z-index: 1;
+}
+
+.products-inner {
+  position: relative;
+  z-index: 2;
+  /* max-width: 1600px; */
+  padding-left: clamp(20px, 12vw, 225px);
+  padding-right: clamp(20px, 12vw, 225px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.products-title {
+  font-size: clamp(28px, 2.6vw, 46px);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.products-subtitle {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: clamp(16px, 1.5vw, 24px);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  margin-top: 0.5vw;
+}
+
+.products-description {
+  font-size: clamp(16px, 1.6vw, 24px);
+  line-height: 52px;
+  letter-spacing: 0.15em;
+  margin-top: 2vw;
+}
+
+/* Grid */
+
+.products-grid {
+  margin-top: 5vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3vw;
+}
+
+.product-card {
+  text-align: left;
+}
+
+.product-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-link {
+  display: block;
+  position: relative;
+}
+
+.product-link img {
+  width: 100%;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-title {
+  font-size: clamp(16px, 1.1vw, 18px);
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: 0.14em;
+  color: #151515;
+  margin-top: 1vw;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.product-text {
+  font-size: clamp(14px, 1vw, 16px);
+  line-height: 27px;
+  letter-spacing: 0.14em;
+  color: #151515;
+  margin-top: 0.5vw;
+}
+
+/* Hover zoom mượt hơn */
+.product-link:hover img {
+  transform: scale(1.06);
+}
+
+/* Arrow icon */
+
+.product-arrow {
+  position: absolute;
+  right: 1.2vw;
+  bottom: 1.2vw;
+  width: clamp(36px, 2.5vw, 48px);
+  height: clamp(36px, 2.5vw, 48px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.product-arrow img {
+  width: 100%;
+  height: auto;
+}
+
+/* Hover effect icon */
+
+.product-link:hover .product-arrow {
+  transform: translateX(4px);
+  background: #005ba7;
+  box-shadow: 0 8px 20px rgba(0, 91, 167, 0.25);
+}
+
+.product-link:hover .product-arrow img {
+  filter: brightness(0) invert(1);
+}
+
+/* Button */
+
+.products-button {
+  margin-top: 5vw;
+}
+
+.btn-products {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+  width: clamp(280px, 24vw, 391px);
+  height: clamp(56px, 4vw, 69px);
+  background: #ffffff;
+  border-radius: 8px;
+  color: #005ba7;
+  border: 2px solid #005eae;
+  font-size: clamp(16px, 1.2vw, 20px);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+
+  transition:
+    background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.3s ease;
+}
+
+.btn-products:hover {
+  background: #005ba7;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 91, 167, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Bottom diagonal shape */
+
+.products-shape {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 12vw;
+  /* background: #f2f2f2;
+  clip-path: polygon(0 0, 100% 35%, 100% 100%, 0 100%); */
+}
+
+/* <!-- ===== Facility Section ===== --> */
+
+.facility {
+  background: #2d6fb3;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.facility-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(40px, 2vw, 80px);
+
+  padding: clamp(80px, 8vw, 158px) clamp(30px, 4vw, 67px)
+    clamp(80px, 8vw, 158px) clamp(60px, 7vw, 296px);
+
+  position: relative;
+  z-index: 2;
+}
+
+/* LEFT */
+.facility-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.facility-title {
+  font-size: clamp(28px, 2.6vw, 46px);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.17em;
+}
+
+.facility-title span {
+  display: block;
+  margin-top: clamp(6px, 0.6vw, 8px);
+  font-size: clamp(14px, 1vw, 18px);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #93c2df;
+}
+
+.facility-line {
+  width: 1px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* TEXT */
+.facility-text {
+  max-width: 41.67vw;
+  font-size: clamp(16px, 1.2vw, 20px);
+  font-weight: 500;
+  line-height: 2.1;
+  letter-spacing: 0.14em;
+  opacity: 0.95;
+}
+
+/* RIGHT BACKGROUND IMAGE */
+.facility-bg {
+  width: clamp(220px, 18vw, 341px);
+  height: clamp(160px, 14vw, 249px);
+  background: url("../assets/images/a 1.png") no-repeat center/contain;
+  flex-shrink: 0;
+}
+/* =============================
+   Exterior Section
+============================= */
+
+.exterior {
+  position: relative;
+  background: #ffffff;
+}
+
+/* ===== HERO BACKGROUND ===== */
+
+.exterior-hero {
+  position: relative;
+  height: clamp(400px, 45vw, 720px);
+  background: url("../assets/images/IMG_6658\ 4.png") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: clamp(80px, 8vw, 140px);
+}
+
+.exterior-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.exterior-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #ffffff;
+}
+
+.exterior-title {
+  font-size: clamp(32px, 3.2vw, 52px);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+}
+
+.exterior-subtitle {
+  margin-top: 1vw;
+  font-size: clamp(14px, 1.2vw, 20px);
+  letter-spacing: 0.15em;
+}
+
+/* ===== IMAGES ĐÈ LÊN ===== */
+
+.exterior-images {
+  position: relative;
+  z-index: 3;
+
+  /* width: 80%;
+  max-width: 1400px;
+
+  margin-top: clamp(120px, 12vw, 220px); */
+
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+
+  padding-left: clamp(20px, 11.46vw, 220px);
+  padding-right: clamp(20px, 11.46vw, 220px);
+  padding-top: 8.65vw;
+  padding-bottom: 6.5vw;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: clamp(20px, 3vw, 60px);
+  row-gap: 0;
+}
+
+.exterior-image img {
+  width: 100%;
+  display: block;
+}
+
+/* ===== WHITE AREA ===== */
+
+/* TEXT nằm dưới 2 hình */
+.exterior-description {
+  grid-column: 1 / -1;
+  margin: 0; /* bỏ margin-top nếu có */
+  padding-top: 1vw;
+  text-align: right;
+  font-size: clamp(14px, 1vw, 18px);
+  line-height: 2;
+  letter-spacing: 0.1em;
+  color: #151515;
+}
+
+/* =============================
+   Entrance Lobby Section
+============================= */
+
+.entrance {
+  margin-top: 15vw;
+  background: #dbeaf1;
+  /* padding:
+    clamp(80px, 8vw, 140px)
+    clamp(30px, 6vw, 220px)
+    clamp(100px, 10vw, 180px); */
+
+  padding-left: clamp(20px, 11.46vw, 220px);
+  padding-right: clamp(20px, 11.46vw, 220px);
+  padding-top: clamp(80px, 8vw, 140px);
+  padding-bottom: clamp(100px, 10vw, 180px);
+}
+
+/* Header */
+
+.entrance-header {
+  text-align: center;
+  margin-bottom: clamp(60px, 6vw, 100px);
+}
+
+.entrance-title {
+  font-size: clamp(28px, 2vw, 38px);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #366a94;
+}
+
+.entrance-subtitle {
+  margin-top: 1vw;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
+  font-size: clamp(18px, 1.5vw, 24px);
+  letter-spacing: 0.07em;
+  color: #88a9b9;
+}
+
+/* Content */
+
+.entrance-content {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* LEFT */
+
+.entrance-left {
+  position: relative;
+  width: 60%;
+  z-index: 1;
+}
+
+.entrance-left-bg {
+  background: #ffffff;
+  padding: clamp(40px, 4vw, 80px);
+}
+
+.entrance-left img {
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+}
+
+.entrance-caption {
+  margin-top: clamp(16px, 1.5vw, 24px);
+  font-size: clamp(18px, 1.5vw, 24px);
+  letter-spacing: 0.08em;
+  color: #366a94;
+}
+
+/* RIGHT */
+
+.entrance-right {
+  position: relative;
+  width: 55%;
+  margin-left: -5%;
+  margin-top: clamp(60px, 9vw, 120px);
+  z-index: 3;
+}
+
+.entrance-right img {
+  width: 100%;
+  display: block;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+}
+
+.entrance-description {
+  margin-top: clamp(24px, 2vw, 40px);
+  font-size: clamp(16px, 1vw, 18px);
+  line-height: 2.11;
+  letter-spacing: 0.14em;
+  color: #2c2c2c;
+}
+
+/* ===== Connector Line ===== */
+
+.entrance-content::after {
+  content: "";
+  position: absolute;
+
+  top: 16vw;
+  left: 30.85vw;
+  width: 7vw;
+
+  height: 0.15vw;
+
+  background: #5f8faa;
+
+  z-index: 100;
+}
+
+/* Chấm tròn */
+.entrance-content::before {
+  content: "";
+  position: absolute;
+
+  top: calc(16.1vw - 0.3vw);
+  left: calc(31vw - 0.3vw);
+
+  width: 0.6vw;
+  height: 0.6vw;
+
+  background: #5f8faa;
+  border-radius: 50%;
+
+  z-index: 200;
+}
+
+/* =============================
+   Meeting Section
+============================= */
+
+.meeting {
+  /* background: #AFC7D4; */
+  background: url("../assets/images/Rectangle\ 810.png") no-repeat center/cover;
+  position: relative;
+  padding: clamp(80px, 8vw, 140px) clamp(20px, 11.46vw, 220px)
+    clamp(120px, 12vw, 200px);
+}
+.meeting-inner {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.meeting-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* tránh ảnh hưởng click */
+}
+
+.line {
+  position: absolute;
+  background: #6fa0bb; /* màu xanh nhẹ */
+}
+
+.line::before {
+  content: "";
+  position: absolute;
+  width: clamp(6px, 0.6vw, 12px);
+  height: clamp(6px, 0.6vw, 12px);
+  background: #6fa0bb;
+  border-radius: 50%;
+}
+
+.line-vertical {
+  width: 2px;
+  height: 28.8vw;
+  top: 31vw;
+  left: 18vw;
+  z-index: 10000;
+}
+
+.line-vertical::before {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.line-horizontal {
+  height: 2px;
+  width: 6vw;
+  top: 31vw;
+  left: 32.5vw;
+  z-index: 10000;
+}
+
+.line-horizontal::before {
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.line-diagonal {
+  width: 2px;
+  height: 36.5vw;
+  top: 27vw;
+  left: 25.5vw;
+  transform: rotate(-26deg);
+  transform-origin: top;
+  z-index: 10000;
+}
+
+.line-diagonal::before {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.meeting-header {
+  text-align: center;
+  margin-bottom: clamp(60px, 6vw, 100px);
+}
+
+.meeting-title {
+  font-size: clamp(28px, 2vw, 38px);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #366a94;
+}
+
+.meeting-subtitle {
+  margin-top: 1vw;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
+  font-size: clamp(18px, 1.5vw, 24px);
+  letter-spacing: 0.07em;
+  color: #88a9b9;
+}
+
+/* ===== Top Layout (1 image full) ===== */
+
+.meeting-top {
+  margin-top: clamp(60px, 6vw, 100px);
+}
+
+/* image wrapper */
+.meeting-top-image {
+  position: relative;
+}
+
+.meeting-top-image img {
+  width: 100%;
+  display: block;
+}
+
+/* Label nằm đè trên ảnh */
+.meeting-plan-label {
+  position: absolute;
+  left: 0vw;
+  bottom: 0vw;
+  font-size: clamp(18px, 1.5vw, 24px);
+  letter-spacing: 0.08em;
+  color: #366a94;
+}
+/* Text dưới ảnh canh phải */
+.meeting-top-description {
+  margin-top: clamp(24px, 2vw, 40px);
+  margin-left: auto;
+  font-size: clamp(16px, 1vw, 18px);
+  line-height: 2;
+  letter-spacing: 0.1em;
+  color: #2c2c2c;
+
+  text-align: left;
+  width: 50%;
+}
+
+/* ===== Bottom Wrapper ===== */
+
+.meeting-bottom-wrapper {
+  margin-top: clamp(80px, 8vw, 140px);
+}
+
+/* Title 見学スペース */
+
+.meeting-bottom-title {
+  font-size: clamp(18px, 1.25vw, 24px);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #565452;
+  margin-bottom: 1vw;
+}
+
+/* ===== Bottom Layout ===== */
+
+.meeting-bottom {
+  display: flex;
+  gap: clamp(40px, 4vw, 80px);
+}
+
+.meeting-item {
+  width: 50%;
+}
+
+.meeting-item img {
+  width: 100%;
+  display: block;
+}
+
+.meeting-item figcaption {
+  margin-top: clamp(16px, 1.5vw, 24px);
+  font-size: clamp(16px, 1vw, 18px);
+  line-height: 2;
+  letter-spacing: 0.1em;
+  color: #2c2c2c;
+}
+
+/* =============================
+   Process Section
+============================= */
+
+/* Section base */
+.process {
+  background: #eaf5ff;
+  padding: clamp(80px, 8vw, 140px) clamp(20px, 8vw, 160px);
+}
+
+.process-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Section Header */
+
+.process-header {
+  text-align: center;
+  margin-bottom: clamp(60px, 6vw, 100px);
+}
+
+.process-title {
+  font-size: clamp(26px, 2.4vw, 40px);
+  font-weight: 700;
+  color: #2c5f80;
+  letter-spacing: 0.08em;
+}
+
+.process-title span {
+  font-size: clamp(16px, 1.2vw, 20px);
+}
+
+.process-subtitle {
+  margin-top: clamp(12px, 1vw, 20px);
+  font-size: clamp(14px, 1vw, 18px);
+  letter-spacing: 0.1em;
+  color: #6f8fa3;
+}
+
+/* STEP Arrow Bar */
+.process-steps {
+  position: relative;
+  width: 100%;
+  margin-bottom: 0;
+  z-index: 1;
+}
+
+.process-bar-bg {
+  width: 100%;
+  display: block;
+}
+
+.process-step-items {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.process-step-items img {
+  width: clamp(60px, 6vw, 120px);
+}
+
+.arrow {
+  position: absolute;
+  height: 100%; /* bằng chiều cao process-steps */
+  width: auto;
+  top: 0;
+}
+
+.arrow-1 {
+  left: 18%;
+  top: 0;
+}
+
+.arrow-2 {
+  left: 40%;
+}
+.arrow-3 {
+  left: 60%;
+}
+.arrow-4 {
+  left: 80%;
+}
+
+/* Cards Layout */
+.process-cards {
+  display: flex;
+  gap: clamp(20px, 2vw, 40px);
+  margin-top: -1vw;
+  margin-left: 1vw;
+  position: relative;
+  z-index: 2;
+}
+
+.process-card {
+  position: relative;
+  flex: 1;
+  background: #ffffff;
+  padding: 1vw;
+  border-radius: 8px;
+  /* box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08); */
+  /* box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18); */
+}
+
+.process-card::after {
+  content: "";
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: -12px;
+
+  height: 20px;
+  background: rgba(0, 0, 0, 0.35);
+  filter: blur(18px);
+
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.process-card h3 {
+  font-size: clamp(16px, 1.2vw, 22px);
+  color: #2c5f80;
+  margin-bottom: 1vw;
+}
+
+.process-card p {
+  font-size: clamp(14px, 1vw, 18px);
+  line-height: 2;
+  color: #444;
+}
+
+/* =============================
+   Responsive
+============================= */
+
+@media (max-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .entrance-content {
+    grid-template-columns: 1fr;
+    row-gap: clamp(40px, 6vw, 80px);
+  }
+
+  .meeting-bottom {
+    flex-direction: column;
+  }
+
+  .meeting-item {
+    width: 100%;
+  }
+
+  .meeting-top-text {
+    max-width: 100%;
+  }
+
+  .process-cards {
+    flex-wrap: wrap;
+  }
+
+  .process-card {
+    flex: 1 1 45%;
+  }
+
+  .process-steps {
+    flex-wrap: wrap;
+  }
+
+  .step {
+    flex: 1 1 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .exterior-images {
+    grid-template-columns: 1fr;
+  }
 }
