@@ -406,30 +406,24 @@ body {
 }
 
 .about-intro {
-  /* text-align: center;
-  margin-bottom: clamp(60px, 8vw, 120px); */
-
   display: flex;
   flex-direction: column;
-  /* align-items: flex-start;
-  justify-content: center;
-  gap: clamp(40px, 5vw, 100px); */
   margin-bottom: clamp(60px, 8vw, 120px);
-  padding: clamp(80px, 10vw, 140px) 5vw;
-  /* flex-wrap: wrap; */
+  padding: clamp(80px, 10vw, 140px) clamp(20px, 11.46vw, 220px);
 }
 
 .about-main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: clamp(40px, 5vw, 100px);
+  gap: 2vw;
   flex-wrap: wrap;
-  /* padding: 2vw 5vw; */
 }
+
 .about-left {
   gap: 2vw;
 }
+
 .about-left,
 .about-right {
   flex: 1;
@@ -443,11 +437,10 @@ body {
   font-weight: 600;
   letter-spacing: 0.08em;
   color: #9c9c9c;
-  margin-bottom: clamp(24px, 3vw, 40px);
 }
 
 .about-title-ja {
-  font-size: clamp(24px, 2.5vw, 36px);
+  font-size: clamp(24px, 2vw, 36px);
   font-weight: 600;
   line-height: clamp(40px, 4vw, 66.4px);
   color: #2d2d2d;
@@ -484,21 +477,12 @@ body {
 }
 
 .icon-three-axis {
-  width: clamp(50px, 5vw, 90px); /* Responsive kích thước icon */
-  height: auto; /* Giữ tỷ lệ */
-  flex-shrink: 0; /* Không bị co lại */
-  vertical-align: middle; /* Dự phòng nếu không dùng flex */
+  width: auto; 
+  height: auto;
+  flex-shrink: 0; 
+  vertical-align: middle;
 }
 
-/* .about-divider {
-  font-size: clamp(60px, 6vw, 100px);
-  font-weight: 900;
-  color: var(--primary);
-  line-height: 1;
-  align-self: center;
-  flex-shrink: 0;
-  padding: 0 clamp(10px, 1.5vw, 20px);
-} */
 
 .about-right {
   text-align: left; /* hoặc justify nếu Figma có */
@@ -513,7 +497,7 @@ body {
 .about-description {
   font-size: clamp(16px, 1.2vw, 22px);
   font-weight: 400;
-  line-height: clamp(28px, 3.5vw, 51px);
+  line-height: clamp(28px, 2.5vw, 51px);
   letter-spacing: 0.25em;
   color: #272727;
   max-width: 780px;
