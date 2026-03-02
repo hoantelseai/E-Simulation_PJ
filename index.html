@@ -47,11 +47,20 @@
     <!-- JS: defer để không block rendering -->
 
     <!-- ===== Header ===== -->
-    <header class="header">
+    <header class="header-pc">
         <div class="header-inner">
             <div class="logo">
                 <img src="./assets/images/logo-big.jpg" alt="三洋工業ロゴ">
             </div>
+            <!-- 
+            <button class="menu-toggle" type="button" aria-label="メニューを開く">
+                <span class="menu-toggle-text">MENU</span>
+                <span class="menu-toggle-icon" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button> -->
 
             <nav class="nav">
                 <ul>
@@ -68,9 +77,26 @@
         </div>
     </header>
 
+    <!-- ===== Header SP ===== -->
+<header class="header-sp">
+    <div class="header-sp-inner">
+        <div class="logo-sp">
+            <img src="./assets/images/logo-big.jpg" alt="三洋工業ロゴ">
+        </div>
 
-    <!-- ===== Hero Section ===== -->
+        <button class="menu-toggle-sp" type="button">
+            <span class="menu-text">MENU</span>
+            <span class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+    </div>
+</header>
+
     <main>
+        <!-- ===== Hero Section ===== -->
         <section class="hero">
             <div class="hero-overlay"></div>
 
@@ -116,6 +142,53 @@
             </div>
         </section>
 
+        <!-- ===== HERO SP ===== -->
+        <section class="hero-sp">
+            <div class="hero-sp-overlay"></div>
+
+            <div class="hero-sp-inner">
+                <p class="hero-sp-subtitle">Trusted&Safety</p>
+                <p class="hero-sp-tagline">
+                    安全と信頼で次世代へ繋ぐ 明日を作る
+                </p>
+
+                <h1 class="hero-sp-title">
+                    地震動を<br>
+                    高精度に<br>
+                    再現。
+                </h1>
+
+                <div class="hero-sp-product">
+                    <p class="hero-sp-type">三次元振動試験機</p>
+                    <p class="hero-sp-type-below">イーシュミレーション</p>
+                    <h2 class="hero-sp-name">E-Simulation</h2>
+                </div>
+
+                <p class="hero-sp-desc">
+                    25㎡（5m×5m）のテーブル上で、三軸同時加振による
+                    大規模な振動試験が可能です。大型の資機材に
+                    実地震波を入力した試験にも対応できます。
+                </p>
+            </div>
+
+            <div class="hero-sp-cta">
+                <a href="#" class="hero-sp-btn hero-sp-btn-blue">
+                    リーフレットダウンロード
+                </a>
+                <a href="#" class="hero-sp-btn hero-sp-btn-red">
+                    試験の相談をする
+                </a>
+            </div>
+        </section>
+
+        <section class="hero-sp-notice">
+            <p>
+                新着情報　2026.X.XX<br>
+                三次元振動試験機「E-Simulation」のサイトを公開しました
+            </p>
+        </section>
+
+        <!-- ===== ABOUT Section ===== -->
         <section class="about">
             <div class="about-container">
                 <div class="about-intro">
@@ -173,7 +246,8 @@
                                 次世代へと繋ぐ
                             </h2>
 
-                            <h3 class="spec-subtitle">試験機の仕様</h3>
+                            <div class="spec-wrap">
+                                <h3 class="spec-subtitle">試験機の仕様</h3>
 
                             <p class="spec-lead">
                                 最大振幅600mm（水平）の変位性能により、過去の主要な<br>
@@ -194,6 +268,9 @@
                                     <li><strong>試験台寸法</strong>：5m×5m</li>
                                 </ul>
                             </div>
+
+                            </div>
+                            
                         </div>
                     </div>
 
@@ -283,27 +360,6 @@
                 </div>
 
             </div>
-
-            <!-- Bottom info -->
-            <!-- <div class="test-info">
-            <div class="test-menu">
-                <h3>Menu　試験メニュー</h3>
-                <ul>
-                    <li>建築部材・設備機器の耐震性能試験</li>
-                    <li>什器、備品、機材等の振動耐久性試験</li>
-                    <li>医療機器の耐震試験</li>
-                    <li>カスタマイズ試験（お客様のニーズに合わせた試験条件設定）</li>
-                </ul>
-            </div>
-
-            <div class="test-products">
-                <h3>品目例</h3>
-                <p>
-                    建築部材・設備部材、免震・制振デバイス、家具・家電、
-                    情報通信機器、医療機器、生産設備、交通、インフラなど
-                </p>
-            </div>
-        </div> -->
         </section>
 
         <!-- ===== Products Section ===== -->
@@ -426,7 +482,7 @@
                     <p class="exterior-subtitle">Exterior View</p>
                 </div>
 
-                <!-- Images + text chung 1 grid -->
+                <!-- Images + text -->
                 <div class="exterior-images">
                     <div class="exterior-image">
                         <img src="./assets/images/Rectangle 798.png" alt="外観写真1" />

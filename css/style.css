@@ -30,13 +30,21 @@ body {
    Header
 ============================= */
 
-.header {
+.header-pc {
   position: fixed;
   top: 1vw;
   left: 50%;
   transform: translateX(-50%);
   width: 94%;
   z-index: 1000;
+}
+
+.header-pc {
+  display: block;
+}
+
+.header-sp {
+  display: none;
 }
 
 .header-inner {
@@ -56,6 +64,71 @@ body {
 .logo img {
   height: 3vw;
   min-height: 40px;
+}
+
+/* ==========================
+   SP Header
+========================== */
+.header-sp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header-sp-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 2vw;
+  padding: 12px 16px;
+  height: 64px;
+
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Logo SP */
+.logo-sp img {
+  height: 38px;
+}
+
+/* MENU button */
+.menu-toggle-sp {
+  display: flex;
+  align-items: center;
+  gap: 4vw;
+
+  background: #d9d9d9;
+  border: none;
+  border-radius: 4px;
+  padding: 3vw;
+
+  cursor: pointer;
+}
+
+.menu-text {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #005ba7;
+}
+
+/* Hamburger icon */
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 20px;
+}
+
+.menu-icon span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: #598cb3;
 }
 
 .nav {
@@ -183,20 +256,10 @@ body {
   padding: 8vw 5vw 5vw 5vw; /* top padding lớn hơn header */
   display: flex;
   align-items: center;
-  background: url("../assets/images/IMG_1449.jpg") center/cover no-repeat;
+  background: url("../assets/images/IMG_6682\ 1.png") center/cover no-repeat;
 }
 
 /* .hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(15, 76, 129, 0.85) 0%,
-    rgba(15, 76, 129, 0.5) 40%,
-    rgba(15, 76, 129, 0.1) 100%
-  );
-} */
-.hero-overlay {
   position: absolute;
   inset: 0;
 
@@ -210,12 +273,13 @@ body {
   );
 
   z-index: 1;
-}
+} */
 
 .hero-content {
   position: relative;
   z-index: 2;
   max-width: 50%;
+  margin-top: 2vw;
 }
 
 .hero-subtitle {
@@ -269,16 +333,11 @@ body {
 .btn-accent {
   background: #da5151;
   color: #ffffff;
-
   width: clamp(320px, 25.7vw, 493px);
   height: clamp(56px, 3.7vw, 71px);
-
-  /* border-radius: 999px; */
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   text-decoration: none;
 }
 
@@ -356,23 +415,6 @@ body {
   font-size: clamp(10px, 0.8vw, 14px);
   letter-spacing: 0.2em;
 }
-
-/* .hero-notice {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  transform: translateY(50%);
-  background: rgba(255, 255, 255, 0.95);
-  padding: 1.2vw 2vw;
-  border-top-left-radius: 0.8vw;
-  max-width: 45vw;
-}
-
-.hero-notice p {
-  color: #333;
-  font-size: clamp(12px, 1vw, 16px);
-  line-height: 1.6;
-} */
 
 .hero-notice {
   position: absolute;
@@ -455,37 +497,33 @@ body {
 }
 
 .about-divider {
-  width: 1px; /* mỏng */
-  /* height: clamp(100px, 10vw, 159px);       */
-  background-color: #c4c4c4; /* đúng màu */
+  width: 1px;
+  background-color: #c4c4c4;
   align-self: stretch;
   flex-shrink: 0;
   margin: 0 clamp(16px, 2vw, 40px);
 }
 
 .about-title-en {
-  /* font-family: "Impact", sans-serif; */
   font-family: "Anton", sans-serif;
   font-size: clamp(42px, 5vw, 82px);
   line-height: clamp(60px, 7vw, 120.1px);
   letter-spacing: 0.03em;
   color: #034a86;
-
   display: flex;
   align-items: center;
   gap: clamp(12px, 1.5vw, 20px);
 }
 
 .icon-three-axis {
-  width: auto; 
+  width: auto;
   height: auto;
-  flex-shrink: 0; 
+  flex-shrink: 0;
   vertical-align: middle;
 }
 
-
 .about-right {
-  text-align: left; /* hoặc justify nếu Figma có */
+  text-align: left;
 }
 
 .icon-wave {
@@ -503,107 +541,10 @@ body {
   max-width: 780px;
 }
 
-/* Blue spec block */
-/* .about-spec-section {
-  background: linear-gradient(135deg, #0f4c81 0%, #004080 100%);
-  border-radius: clamp(12px, 1.2vw, 20px);
-  overflow: hidden;
-  display: flex;
-  flex-wrap: wrap;
-  color: var(--white);
-  position: relative;
-}
+/* =============================
+   Blue spec Section
+=============================  */
 
-.spec-image {
-  flex: 1 1 45%;
-  min-width: 300px;
-  position: relative;
-}
-
-.spec-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.coming-soon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.6);
-  color: var(--white);
-  padding: 1vw 2.5vw;
-  border-radius: 999px;
-  font-size: clamp(16px, 1.4vw, 28px);
-  font-weight: 700;
-  white-space: nowrap;
-  backdrop-filter: blur(4px);
-}
-
-.spec-content {
-  flex: 1 1 55%;
-  padding: clamp(40px, 5vw, 80px) clamp(30px, 4vw, 60px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.spec-eyebrow {
-  font-size: clamp(14px, 1vw, 18px);
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  color: var(--light-blue);
-  margin-bottom: 1.5vw;
-}
-
-.spec-main-title {
-  font-size: clamp(32px, 3.8vw, 64px);
-  font-weight: 800;
-  line-height: 1.15;
-  margin-bottom: 3vw;
-}
-
-.spec-subtitle {
-  font-size: clamp(20px, 1.8vw, 32px);
-  font-weight: 700;
-  margin-bottom: 1.5vw;
-}
-
-.spec-lead {
-  font-size: clamp(16px, 1.3vw, 24px);
-  font-weight: 500;
-  line-height: 1.7;
-  margin-bottom: 3vw;
-}
-
-.spec-list-title {
-  font-size: clamp(18px, 1.5vw, 26px);
-  font-weight: 700;
-  margin-bottom: 1.5vw;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-  padding-bottom: 0.8vw;
-  display: inline-block;
-}
-
-.spec-list ul {
-  list-style: none;
-  font-size: clamp(15px, 1.1vw, 20px);
-  line-height: 2.2;
-}
-
-.spec-list li {
-  margin-bottom: 0.8vw;
-}
-
-.spec-list strong {
-  min-width: 140px;
-  display: inline-block;
-  font-weight: 700;
-} */
-
-/* Blue spec block - khớp tone xanh trong Figma */
 .about-spec-section {
   background: linear-gradient(
     100deg,
@@ -621,9 +562,7 @@ body {
 }
 
 .about-spec-section-inner {
-  /* max-width: 1800px; */
   margin: 0 auto;
-  /* padding: 0 224px; */
   padding-top: 2vw;
   padding-bottom: 2vw;
   padding-left: clamp(20px, 11.46vw, 220px);
@@ -634,7 +573,7 @@ body {
 }
 
 .spec-image {
-  flex: 0 0 45%; /* Chiếm ~45% bên trái */
+  flex: 0 0 45%;
   position: relative;
   min-width: 400px;
   display: flex;
@@ -644,7 +583,6 @@ body {
 .spec-image img {
   width: 100%;
   height: auto;
-  /* object-fit: cover; */
   object-position: center;
   display: block;
 }
@@ -662,24 +600,7 @@ body {
   justify-content: center;
 }
 
-/* Overlay Coming Soon - đặt ở giữa hình, nhưng chỉ cover phần máy chính */
-/* .coming-overlay {
-    position: absolute;
-  width: clamp(300px, 35vw, 619px);
-  height: clamp(400px, 50vw, 809px);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: rgba(0, 0, 0, 0.4);
-
-  box-shadow: 0 40px 80px rgba(62, 147, 210, 0.4); 
-  border-radius: 8px;
-} */
+/* Overlay Coming Soon */
 
 .coming-soon {
   background: transparent;
@@ -690,16 +611,9 @@ body {
   font-weight: 200;
   letter-spacing: 0.05em;
   white-space: nowrap;
-  /* backdrop-filter: blur(6px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); */
 }
 
 .spec-content {
-  /* flex: 1;
-  padding: clamp(50px, 6vw, 90px) clamp(40px, 5vw, 70px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center; */
   flex: 1;
   padding: clamp(24px, 2vw, 48px) 0;
   display: flex;
@@ -779,7 +693,7 @@ body {
 }
 
 .spec-list li {
-  margin-bottom:1vw;
+  margin-bottom: 1vw;
   position: relative;
   padding-left: 1.8em;
 }
@@ -1372,7 +1286,7 @@ body {
   letter-spacing: 0.15em;
 }
 
-/* ===== IMAGES ĐÈ LÊN ===== */
+/* ===== IMAGES ===== */
 
 .exterior-images {
   position: relative;
@@ -2043,7 +1957,7 @@ body {
 }
 
 /* Responsive: Stack dọc trên tablet/mobile */
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   .about-spec-section {
     flex-direction: column;
   }
@@ -2107,5 +2021,286 @@ body {
   }
   .test-description br {
     display: none;
+  }
+} */
+
+/* Mặc định: SP ẩn */
+.hero-sp,
+.hero-sp-notice {
+  display: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .header-pc {
+    display: none;
+  }
+
+  .header-sp {
+    display: block;
+  }
+
+  .hero {
+    display: none;
+  }
+
+  .hero-sp,
+  .hero-sp-notice {
+    display: block;
+    color: #00081a;
+  }
+
+  .hero-sp {
+    position: relative;
+    background: url("../assets/images/IMG_6682\ 2.png") center/cover no-repeat;
+    padding: 15vw 0 0;
+    color: #fff;
+  }
+
+  .hero-sp-inner {
+    position: relative;
+    z-index: 2;
+    padding: 8vw 3vw 2vw;
+  }
+
+  .hero-sp-subtitle {
+    font-size: 5.669vw;
+    font-weight: 700;
+  }
+
+  .hero-sp-tagline {
+    font-size: 3.2vw;
+    margin-top: 2vw;
+  }
+
+  .hero-sp-title {
+    font-size: 10.347vw;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-top: 6vw;
+  }
+
+  .hero-sp-product {
+    margin-top: 8vw;
+  }
+
+  .hero-sp-type {
+    font-size: 4.267vw;
+  }
+
+  .hero-sp-type-below {
+    font-size: 3.2vw;
+  }
+  .hero-sp-name {
+    font-size: 8.288vw;
+    font-weight: 900;
+  }
+
+  .hero-sp-desc {
+    font-size: 3.733vw;
+    line-height: 1.8;
+    margin-top: 6vw;
+    padding-bottom: 4vw;
+  }
+
+  .hero-sp-cta {
+    display: flex;
+    width: 100%;
+  }
+
+  .hero-sp-btn {
+    width: 50%;
+    text-align: center;
+    padding: 4vw 1vw;
+    font-size: 3.733vw;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .hero-sp-btn-blue {
+    background: #2e8ca6;
+  }
+
+  .hero-sp-btn-red {
+    background: #c64545;
+  }
+
+  .hero-sp-notice {
+    background: #f2f2f2;
+    padding: 6vw 5%;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 6vw 0;
+  }
+
+  .about-intro {
+    padding: 4vw 3vw;
+    margin-bottom: 60px;
+  }
+
+  .about-main {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+  }
+
+  /* Ẩn divider dọc trên SP */
+  .about-divider {
+    display: none;
+  }
+
+  .about-left,
+  .about-right {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .about-label {
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+  }
+
+  .about-title-ja {
+    white-space: normal;
+    text-align: center;
+  }
+
+  .about-ja-sub {
+    display: block;
+    margin-left: 0;
+    margin-top: 8px;
+  }
+
+  .about-title-en {
+    font-size: 52px;
+    line-height: 60px;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .icon-three-axis {
+    width: 36px;
+    height: auto;
+  }
+
+  .about-right {
+    text-align: center;
+  }
+
+  .about-description {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 28px;
+    letter-spacing: 0.12em;
+    max-width: 100%;
+    text-align: justify;
+    margin: 0 auto;
+  }
+
+  .about-spec-section {
+    flex-direction: column;
+    margin-top: 60px;
+  }
+
+  .about-spec-section-inner {
+    flex-direction: column;
+    padding: 0px;
+    gap: 0;
+    background-color: #ffffff;
+  }
+
+  /* IMAGE */
+  .spec-image {
+    flex: none;
+    min-width: unset;
+    width: 100%;
+    padding: 0 3vw;
+  }
+
+  .spec-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .coming-soon {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  /* CONTENT */
+  .spec-content {
+    padding: 40px 0 60px;
+  }
+
+  .spec-eyebrow {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 1vw;
+    color: #00081a;
+    padding: 0 3vw;
+  }
+
+  /* TITLE trắng full width */
+  .spec-main-title {
+    width: 100%;
+    font-size: 8vw;
+    line-height: 36px;
+    padding: 0px 3vw;
+    margin-bottom: 5vw;
+  }
+
+  .title-top {
+    padding: 0 3vw;
+  }
+
+  .spec-wrap {
+    background-color: #e6f0f9;
+    padding: 0 3vw;
+    margin-top: 5vw;
+  }
+  .spec-subtitle {
+    font-size: 18px;
+    margin: 24px 0 16px;
+    text-align: center;
+    color: #005ba7;
+  }
+
+  .spec-lead {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 24px;
+    color: #005ba7;
+  }
+
+  .spec-lead br {
+    display: none;
+  }
+
+  /* SPEC LIST */
+  .spec-list-title {
+    font-size: 14px;
+    padding: 6px 16px;
+    margin-bottom: 16px;
+  }
+
+  .spec-list ul {
+    font-size: 13px;
+    line-height: 22px;
+    color: #00081a;
+  }
+
+  .spec-list li {
+    margin-bottom: 12px;
+    padding-left: 18px;
+  }
+
+  .spec-list li::before {
+    font-size: 14px;
+    color: #00081a;
   }
 }

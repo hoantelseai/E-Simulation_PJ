@@ -16,3 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
     heroNotice.textContent = `${date}　${text}`;
   }
 });
+
+const menuToggle = document.querySelector('.menu-toggle');
+const headerInner = document.querySelector('.header-inner');
+
+menuToggle?.addEventListener('click', () => {
+  headerInner?.classList.toggle('is-open');
+});
