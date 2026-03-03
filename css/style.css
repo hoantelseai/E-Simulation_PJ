@@ -2053,54 +2053,91 @@ body {
   .hero-sp {
     position: relative;
     background: url("../assets/images/IMG_6682\ 2.png") center/cover no-repeat;
-    padding: 15vw 0 0;
+    padding: clamp(35px, 15vw, 56.25px) 0 0;
     color: #fff;
   }
 
   .hero-sp-inner {
     position: relative;
     z-index: 2;
-    padding: 8vw 3vw 2vw;
+     padding:
+    clamp(20px, 8vw, 30px)
+    clamp(8px, 3vw, 11.25px)
+    clamp(5px, 2vw, 7.5px);
   }
 
   .hero-sp-subtitle {
-    font-size: 5.669vw;
-    font-weight: 700;
+    /* font-size: 5.669vw;
+    font-weight: 700; */
+    font-size: clamp(14px, 5.669vw, 21.26px);
+  line-height: clamp(16px, 5.6vw, 21px);
+  letter-spacing: 0.08em;
+  font-weight: 700;
   }
 
   .hero-sp-tagline {
-    font-size: 3.2vw;
-    margin-top: 2vw;
+    /* font-size: 3.2vw;
+    margin-top: 2vw; */
+
+      font-size: clamp(10px, 3.2vw, 12px);
+  line-height: clamp(8px, 2.64vw, 9.9px);
+  letter-spacing: 0.02em;
+  margin-top: 2vw;
   }
 
   .hero-sp-title {
-    font-size: 10.347vw;
+    /* font-size: 10.347vw;
     line-height: 1.2;
     font-weight: 700;
-    margin-top: 6vw;
+    margin-top: 6vw; */
+
+      font-size: clamp(24px, 10.347vw, 38.8px);
+  line-height: clamp(32px, 13.867vw, 52px);
+  font-weight: 700;
+  font-style: italic;
+    margin-top: clamp(14px, 6vw, 22.5px);
   }
 
   .hero-sp-product {
-    margin-top: 8vw;
+    /* margin-top: 8vw; */
+    margin-top: clamp(14px, 6vw, 22.5px);
   }
 
   .hero-sp-type {
-    font-size: 4.267vw;
+    /* font-size: 4.267vw; */
+
+      font-size: clamp(12px, 4.267vw, 16px);
+  line-height: clamp(30px, 12.373vw, 46.4px);
+  letter-spacing: 0.02em;
   }
 
   .hero-sp-type-below {
-    font-size: 3.2vw;
+    /* font-size: 3.2vw; */
+
+      font-size: clamp(10px, 3.2vw, 12px);
+  letter-spacing: 0.08em;
   }
   .hero-sp-name {
-    font-size: 8.288vw;
-    font-weight: 900;
+    /* font-size: 8.288vw;
+    font-weight: 900; */
+
+      font-size: clamp(20px, 8.288vw, 31.08px);
+  line-height: clamp(24px, 8.107vw, 30.4px);
+  letter-spacing: 0.03em;
+  font-weight: 900;
   }
 
   .hero-sp-desc {
-    font-size: 3.733vw;
+    /* font-size: 3.733vw;
     line-height: 1.8;
     margin-top: 6vw;
-    padding-bottom: 4vw;
+    padding-bottom: 4vw; */
+
+      font-size: clamp(12px, 4.267vw, 16px);
+  line-height: clamp(20px, 7.467vw, 28px);
+  letter-spacing: 0.02em;
+margin-top: clamp(14px, 6vw, 22.5px);
+  padding-bottom: clamp(10px, 4vw, 15px);
   }
 
   .hero-sp-cta {
@@ -2109,14 +2146,29 @@ body {
   }
 
   .hero-sp-btn {
-    width: 50%;
+    /* width: 50%;
     text-align: center;
     padding: 4vw 1vw;
     font-size: 3.733vw;
     font-weight: 600;
     text-decoration: none;
     color: #fff;
-    cursor: pointer;
+    cursor: pointer; */
+
+
+
+      width: 50%;
+  text-align: center;
+    padding: 
+    clamp(10px, 4vw, 15px)
+    clamp(2px, 1vw, 3.75px);
+  font-size: clamp(12px, 4.267vw, 16px);
+  line-height: clamp(16px, 5.333vw, 20px);
+  letter-spacing: 0.02em;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
   }
 
   .hero-sp-btn-blue {
@@ -2125,14 +2177,18 @@ body {
 
   .hero-sp-btn-red {
     background: #c64545;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .hero-sp-notice {
     background: #f2f2f2;
     padding: 6vw 5%;
-    font-size: 14px;
+    /* font-size: 3.467vw; */
+     font-size: clamp(10px, 3.733vw, 14px);
     line-height: 1.6;
-    margin: 6vw 0;
+    /* margin: 6vw 0; */
   }
 
   .about-intro {
@@ -2168,6 +2224,7 @@ body {
   .about-title-ja {
     white-space: normal;
     text-align: center;
+    font-size: 5.6vw;
   }
 
   .about-ja-sub {
