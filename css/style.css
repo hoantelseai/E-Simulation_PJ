@@ -18,6 +18,7 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -1913,7 +1914,6 @@ body {
 }
 
 .news-text {
-  /* font-size: clamp(14px, 0.9vw, 17px); */
   font-size: 15px;
   line-height: clamp(24px, 1.6vw, 30px);
   letter-spacing: 0.06em;
