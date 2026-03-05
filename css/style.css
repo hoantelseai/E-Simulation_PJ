@@ -524,7 +524,7 @@ body {
   font-size: clamp(16px, calc(1vw + 5px), 24px);
   font-weight: 500;
   line-height: clamp(28px, 2.5vw, 51px);
-  letter-spacing: 0.25em;
+  letter-spacing: 0.02em;
   color: #272727;
   max-width: none;
   margin: 0 auto;
@@ -655,7 +655,7 @@ body {
 .spec-subtitle-en {
   font-family: "Josefin Sans", sans-serif;
   font-size: clamp(10px, calc(0.6vw + 5.4px), 14px);
-  font-weight: 600;
+  font-weight: 400;
   line-height: clamp(24px, 2vw, 64px);
   letter-spacing: 0.06em;
   color: #86a0b5;
@@ -666,9 +666,9 @@ body {
   font-family: "Noto Sans", sans-serif;
   font-size: clamp(16px, calc(0.5vw + 10px), 18px);
   font-weight: 500;
-  line-height: clamp(22px, 1.8vw, 40px);
-  letter-spacing: 0.08em;
-  margin-bottom: 4vw;
+  line-height: clamp(26px, calc(1.2vw + 20px), 38px);
+  letter-spacing: 0.02em;
+  margin-bottom: 3vw;
   color: #075fa8;
 }
 
@@ -680,14 +680,12 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-
   border: none;
   margin: 0;
   z-index: 2;
-
   transform: translateY(-50%);
   font-size: clamp(12px, calc(0.6vw + 8px), 18px);
-  font-weight: 700;
+  font-weight: 400;
   margin-bottom: 1vw;
   display: inline-block;
   padding: 0.2vw 1.5vw;
@@ -711,6 +709,7 @@ body {
   margin-bottom: 1vw;
   position: relative;
   font-weight: 400;
+  letter-spacing: 0.02em;
 }
 
 .spec-list strong {
@@ -737,9 +736,9 @@ body {
   font-size: clamp(16px, calc(0.6vw + 8px), 20px);
   font-weight: 500;
   line-height: clamp(28px, 2.3vw, 36px);
-  letter-spacing: 0.09em;
+  letter-spacing: 0.02em;
   margin-bottom: clamp(20px, 3vw, 40px);
-  color: #333333;
+  color: #00081a;
 }
 
 .btn-consult {
@@ -750,7 +749,7 @@ body {
   background: linear-gradient(90deg, #ff6b35 0%, #ff8c00 100%);
   color: #ffffff;
   font-size: clamp(15px, calc(1vw + 5px), 24px);
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.02em;
   padding: clamp(18px, 2vw, 28px) clamp(40px, 5vw, 80px);
   border-radius: 999px;
@@ -812,16 +811,16 @@ body {
 .coming-soon-text {
   font-size: clamp(14px, calc(1vw + 6px), 24px);
   font-weight: 600;
-  color: var(--accent);
+  color: #ff7757;
   margin: clamp(16px, 2vw, 28px) 0;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.02em;
 }
 
 /* Note */
 .cta-note {
   font-size: clamp(12px, calc(0.4vw + 10px), 16px);
-  color: #222222;
-  letter-spacing: 0.05em;
+  color: #00081a;
+  letter-spacing: 0.02em;
   margin-top: clamp(20px, 3vw, 40px);
 }
 
@@ -867,29 +866,33 @@ body {
 .test-label {
   font-size: clamp(18px, calc(0.8vw + 12px), 24px);
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
 }
 
 .test-label-en {
+  font-family:
+    Josefin Sans,
+    sans-serif;
   font-size: clamp(10px, calc(0.6vw + 6px), 14px);
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-weight: 400;
+  letter-spacing: 0.06em;
   opacity: 0.8;
   margin-bottom: 5vw;
 }
 
 .test-title {
   font-size: clamp(24.64px, calc(2.2vw + 8px), 46px);
-  font-weight: 700;
-  line-height: clamp(40px, 4.5vw, 90px);
-  letter-spacing: 0.03em;
+  font-weight: 600;
+  line-height: clamp(28px, calc(1vw + 20px), 30px);
+  letter-spacing: 0.04em;
   margin-bottom: 2vw;
 }
 
 .test-description {
   font-size: clamp(16px, calc(0.6vw + 8px), 20px);
-  line-height: clamp(28px, 2.3vw, 44px);
-  letter-spacing: 0.08em;
+  line-height: clamp(26px, calc(1.2vw + 20px), 38px);
+  letter-spacing: 0.04em;
+  margin-bottom: 2vw;
 }
 
 /* Video cards */
@@ -948,8 +951,9 @@ body {
 .test-products h3 {
   font-size: clamp(18px, calc(0.8vw + 8px), 20px);
   margin-bottom: clamp(16px, 1.5vw, 28px);
-  color: #005ba7;
-  letter-spacing: 0.05em;
+  color: #024b88;
+  font-weight: 700;
+  letter-spacing: 0.08em;
 }
 
 .test-products h3 {
@@ -960,8 +964,10 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
+  font-weight: 400;
   line-height: 2;
   font-size: 16px;
+  letter-spacing: 0.08em;
 }
 
 .test-menu li::before {
@@ -972,6 +978,8 @@ body {
 .test-products p {
   font-size: 16px;
   line-height: 2;
+  color: #00081a;
+  letter-spacing: 0.02em;
 }
 
 /* =============================
@@ -997,22 +1005,23 @@ body {
 .products-title {
   font-size: clamp(18px, calc(1vw + 8px), 24px);
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
   color: #1365ac;
 }
 
 .products-subtitle {
   font-family: "Josefin Sans", sans-serif;
   font-size: clamp(12px, calc(0.5vw + 8px), 14px);
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-weight: 400;
+  letter-spacing: 0.06em;
   margin-top: 0.5vw;
   color: #78adda;
 }
 
 .products-description {
   font-size: clamp(16px, calc(0.6vw + 8px), 20px);
-  line-height: clamp(28px, 2.3vw, 38px);
+  font-weight: 500;
+  line-height: clamp(26px, calc(1.2vw + 20px), 38px);
   letter-spacing: 0.04em;
   margin-top: 2vw;
   color: #00081a;
@@ -1049,7 +1058,7 @@ body {
 
 .product-title {
   font-size: clamp(15px, calc(0.4vw + 10px), 16px);
-  font-weight: 500;
+  font-weight: 400;
   line-height: 27px;
   letter-spacing: 0.02em;
   color: #151515;
@@ -1061,16 +1070,15 @@ body {
   line-height: 27px;
   letter-spacing: 0.02em;
   color: #151515;
-  margin-top: 0.5vw;
 }
 
 /* Hover zoom*/
-.product-link:hover img {
+/* .product-link:hover img {
   transform: scale(1.06);
-}
+} */
 
 /* Arrow icon */
-
+/* 
 .product-arrow {
   position: absolute;
   right: 1.2vw;
@@ -1091,11 +1099,11 @@ body {
 .product-arrow img {
   width: 100%;
   height: auto;
-}
+} */
 
 /* Hover effect icon */
 
-.product-link:hover .product-arrow {
+/* .product-link:hover .product-arrow {
   transform: translateX(4px);
   background: #005ba7;
   box-shadow: 0 8px 20px rgba(0, 91, 167, 0.25);
@@ -1103,7 +1111,7 @@ body {
 
 .product-link:hover .product-arrow img {
   filter: brightness(0) invert(1);
-}
+} */
 
 /* Button */
 
@@ -1121,10 +1129,10 @@ body {
   background: #ffffff;
   border-radius: 8px;
   color: #005ba7;
-  border: 2px solid #005eae;
+  border: 1px solid #005eae;
   font-size: clamp(15px, calc(0.4vw + 10px), 16px);
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-weight: 400;
+  letter-spacing: 0.02em;
   text-decoration: none;
 
   transition:
@@ -1183,17 +1191,20 @@ body {
 .facility-title {
   font-size: clamp(18px, calc(1.2vw + 6px), 28px);
   font-weight: 600;
-  line-height: 1.4;
-  letter-spacing: 0.17em;
+  /* line-height: 1.4; */
+  letter-spacing: 0.04em;
   color: #333333;
 }
 
 .facility-title span {
+  font-family:
+    Josefin Sans,
+    sans-serif;
   text-align: center;
   display: block;
-  margin-top: clamp(6px, 0.6vw, 8px);
+  margin-top: clamp(6px, 0.5vw, 8px);
   font-size: clamp(10px, calc(0.4vw + 8px), 12px);
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.08em;
   color: #93c2df;
 }
@@ -1201,9 +1212,9 @@ body {
 /* TEXT */
 .facility-text {
   font-size: clamp(16px, calc(0.6vw + 8px), 20px);
-  font-weight: 400;
-  line-height: 2.1;
-  letter-spacing: 0.14em;
+  font-weight: 500;
+  line-height: clamp(26px, calc(1.2vw + 20px), 38px);
+  letter-spacing: 0.04em;
   opacity: 0.95;
   color: #00081a;
 }
@@ -1243,14 +1254,17 @@ body {
 
 .exterior-title {
   font-size: clamp(18px, calc(1.5vw + 4px), 28px);
-  font-weight: 600;
-  letter-spacing: 0.2em;
+  font-weight: 400;
+  letter-spacing: 0.04em;
 }
 
 .exterior-subtitle {
-  margin-top: 1vw;
+  font-family:
+    Josefin Sans,
+    sans-serif;
+  margin-top: 0.5vw;
   font-size: clamp(8.94px, calc(0.5vw + 6px), 12px);
-  letter-spacing: 0.15em;
+  letter-spacing: 0.08em;
 }
 
 /* ===== IMAGES ===== */
@@ -1285,8 +1299,8 @@ body {
   padding-top: 1vw;
   text-align: right;
   font-size: 16px;
-  line-height: 2;
-  letter-spacing: 0.1em;
+  line-height: 1.75;
+  letter-spacing: 0.02em;
   color: #151515;
 }
 
@@ -1294,12 +1308,12 @@ body {
    Entrance Lobby Section
 ============================= */
 
-.entrance {
+/* .entrance {
   position: relative;
-  background: url("../assets/images/Rectangle 809.png") center / cover no-repeat;
+  background: url("../assets/images/Rectangle 809.png");
   overflow: hidden;
 
-  background-size: cover;
+  background-size: 100% auto;
   background-position: center;
   background-repeat: no-repeat;
 
@@ -1307,17 +1321,39 @@ body {
   padding-right: clamp(20px, 11.46vw, 220px);
   padding-top: clamp(80px, 8vw, 140px);
   padding-bottom: clamp(100px, 10vw, 180px);
-}
+} */
 .entrance::before {
   content: "";
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 20%;
-  background: #c4e1ef;
+  height: 35%;
+  /* background: #c4e1ef; */
+  background: #dbeaf1;
   z-index: -1;
 }
+
+.entrance {
+  position: relative;
+  background: url("../assets/images/Rectangle 809.png") center top no-repeat;
+  background-size: 100% auto;
+  overflow: hidden;
+  padding-left: clamp(20px, 11.46vw, 220px);
+  padding-right: clamp(20px, 11.46vw, 220px);
+  padding-top: clamp(80px, 8vw, 140px);
+  padding-bottom: clamp(100px, 10vw, 180px);
+}
+
+.entrance-inner {
+  /* max-width: 1440px; */
+  margin: 0 auto;
+  /* padding-left: clamp(20px, 11.46vw, 220px);
+  padding-right: clamp(20px, 11.46vw, 220px); */
+  /* padding-top: clamp(80px, 8vw, 140px);
+  padding-bottom: clamp(100px, 10vw, 180px); */
+}
+
 /* Header */
 
 .entrance-header {
@@ -1328,16 +1364,16 @@ body {
 .entrance-title {
   font-size: clamp(18px, calc(1.3vw + 4px), 24px);
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
   color: #366a94;
 }
 
 .entrance-subtitle {
-  margin-top: 1vw;
+  margin-top: 0.5vw;
   font-family: "Josefin Sans", sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   font-size: clamp(12px, calc(0.5vw + 8px), 14px);
-  letter-spacing: 0.07em;
+  letter-spacing: 0.06em;
   color: #88a9b9;
 }
 
@@ -1394,9 +1430,9 @@ body {
 .entrance-description {
   margin-top: clamp(24px, 2vw, 40px);
   font-size: 16px;
-  line-height: 2.11;
-  letter-spacing: 0.14em;
-  color: #2c2c2c;
+  line-height: 1.75;
+  letter-spacing: 0.02em;
+  color: #00081a;
 }
 
 /* ===== Connector Line ===== */
@@ -1438,14 +1474,29 @@ body {
 ============================= */
 
 .meeting {
-  background: #c4e1ef;
+  background: url("../assets/images/Rectangle\ 810-2.png") center / cover
+    no-repeat;
+
+  /* background: #c4e1ef; */
   position: relative;
   padding: clamp(80px, 8vw, 140px) clamp(20px, 11.46vw, 220px)
     clamp(120px, 12vw, 200px);
 }
+
+.meeting::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 20%;
+  /* background: #c4e1ef; */
+  background: #dbeaf1;
+  z-index: -1;
+}
 .meeting-inner {
   position: relative;
-  max-width: 1400px;
+  /* max-width: 1400px; */
   margin: 0 auto;
 }
 
@@ -1474,8 +1525,8 @@ body {
 
 .line-vertical {
   width: 2px;
-  top: 36%;
-  bottom: 32%;
+  top: 36.5%;
+  bottom: 34%;
   left: 23%;
   z-index: 900;
 }
@@ -1488,9 +1539,12 @@ body {
 
 .line-horizontal {
   height: 2px;
-  width: 7%;
-  top: 35%;
   left: 43.4%;
+  right: 49.6%; /* thay cho width */
+  top: 36%;
+  /* width: 7%;
+  top: 35%;
+  left: 43.4%; */
   z-index: 900;
 }
 
@@ -1504,9 +1558,9 @@ body {
   width: 2px;
   background: #6fa0bb;
   top: 31%;
-  bottom: 26.2%;
+  bottom: 27.6%;
   left: 32%;
-  transform: rotate(-26deg);
+  transform: rotate(-31deg);
   transform-origin: top;
   z-index: 900;
 }
@@ -1525,16 +1579,16 @@ body {
 .meeting-title {
   font-size: clamp(18px, calc(1.3vw + 4px), 24px);
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
   color: #366a94;
 }
 
 .meeting-subtitle {
-  margin-top: 1vw;
+  margin-top: 0.5vw;
   font-family: "Josefin Sans", sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   font-size: clamp(12px, calc(0.5vw + 8px), 14px);
-  letter-spacing: 0.07em;
+  letter-spacing: 0.06em;
   color: #88a9b9;
 }
 
@@ -1567,10 +1621,9 @@ body {
   margin-top: clamp(24px, 2vw, 40px);
   margin-left: auto;
   font-size: 16px;
-  line-height: 2;
-  letter-spacing: 0.1em;
-  color: #2c2c2c;
-
+  line-height: 1.75;
+  letter-spacing: 0.02em;
+  color: #363636;
   text-align: left;
   width: 50%;
 }
@@ -1611,9 +1664,9 @@ body {
 .meeting-item figcaption {
   margin-top: clamp(16px, 1.5vw, 24px);
   font-size: 16px;
-  line-height: 28px;
+  line-height: 1.75;
   letter-spacing: 0.02em;
-  color: #2c2c2c;
+  color: #00081a;
 }
 /* =============================
    Contact Section
@@ -1659,8 +1712,9 @@ body {
 
 .process-title {
   font-size: clamp(18px, calc(2.1vw + 6px), 46px);
-  font-weight: 700;
-  color: #2c5f80;
+  font-weight: 600;
+  text-align: center;
+  color: #1d4668;
   letter-spacing: 0.08em;
 }
 
@@ -1669,10 +1723,13 @@ body {
 }
 
 .process-subtitle {
-  margin-top: clamp(12px, 1vw, 20px);
+  margin-top: 0.5vw;
+  font-family:
+    Josefin Sans,
+    sans-serif;
   font-size: clamp(12px, calc(0.8vw + 4px), 24px);
-  letter-spacing: 0.1em;
-  color: #6f8fa3;
+  letter-spacing: 0.04em;
+  color: #41586b99;
 }
 
 /* STEP Arrow Bar */
@@ -1759,7 +1816,8 @@ body {
 
 .process-card h3 {
   font-size: clamp(15px, calc(0.9vw + 6px), 23.73px);
-  color: #2c5f80;
+  color: #1c64a7;
+  letter-spacing: 0.07em;
   margin-bottom: 1vw;
 }
 
@@ -1767,7 +1825,7 @@ body {
   font-size: clamp(14px, calc(0.156vw + 12px), 15px);
   /* font-size: 15px; */
   line-height: clamp(24px, calc(0.208vw + 22px), 26px);
-  color: #444;
+  color: #00081a;
 }
 
 /* =============================
@@ -1789,16 +1847,17 @@ body {
 
 .news-title {
   font-size: clamp(18px, calc(1.8vw + 6px), 38px);
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.08em;
-  color: #3c3c3c;
+  color: #242424;
   margin-bottom: 0.5vw;
 }
 
 .news-subtitle {
   font-size: clamp(10px, calc(0.7vw + 6px), 18px);
-  color: #888;
-  letter-spacing: 0.15em;
+  color: #8b8b8b;
+  letter-spacing: 0.08em;
+  font-weight: 600;
 }
 
 .news-list {
@@ -1818,18 +1877,18 @@ body {
 
 .news-date {
   font-size: 15px;
-  line-height: clamp(24px, 1.6vw, 30px);
-  letter-spacing: 0.03em;
+  line-height: 1.73;
+  letter-spacing: 0.02em;
   color: #323232;
   min-width: clamp(120px, 8vw, 160px);
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .news-text {
   font-size: 15px;
-  line-height: clamp(24px, 1.6vw, 30px);
-  letter-spacing: 0.06em;
-  color: #464646;
+  line-height: 1.73;
+  letter-spacing: 0.02em;
+  color: #00081a;
   flex: 1;
 }
 
@@ -1861,15 +1920,19 @@ body {
 }
 
 .footer-info {
+  font-weight: 400;
   font-size: 15px;
   line-height: clamp(22px, 1.6vw, 30px);
   letter-spacing: 0.04em;
   margin-bottom: clamp(15px, 1.5vw, 25px);
+  font-style: normal;
 }
 
 .footer-map {
   font-size: 15px;
-  color: #cfe8ff;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+  color: #ffffff;
   text-decoration: none;
   transition: opacity 0.3s ease;
 }
@@ -1901,7 +1964,7 @@ body {
   padding: clamp(14px, 1.2vw, 20px) clamp(28px, 2.2vw, 40px);
   font-size: 16px;
   letter-spacing: 0.08em;
-  border-radius: 6px;
+  border-radius: 6.56px;
   text-decoration: none;
   overflow: hidden;
 
@@ -1932,6 +1995,7 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* 
 @media (max-width: 1024px) {
   .about-spec-section-inner {
     padding-left: 30px;
@@ -1981,6 +2045,22 @@ body {
   .site-footer {
     padding-left: 30px;
     padding-right: 30px;
+  }
+} */
+
+@media (max-width: 1024px) {
+  .about-spec-section-inner,
+  .cta-consult,
+  .test-video-cards,
+  .products-inner,
+  .facility-inner,
+  .exterior-images,
+  .entrance,
+  .meeting,
+  .process,
+  .site-footer,
+  .about-intro {
+    padding-inline: 50px;
   }
 }
 
@@ -2090,6 +2170,7 @@ body {
     gap: 20px;
   }
 }
+
 /* Mobile */
 @media (max-width: 768px) {
   .header-pc {
@@ -2175,7 +2256,6 @@ body {
     font-size: clamp(24px, 10.347vw, 38.8px);
     line-height: clamp(32px, 13.867vw, 52px);
     font-weight: 700;
-    font-style: italic;
     margin-top: clamp(14px, 6vw, 22.5px);
   }
 
@@ -2969,10 +3049,12 @@ body {
   }
 
   .site-footer {
-    padding-right: 0;
+    padding-right: 17px;
     padding-left: 17px;
   }
 }
+
+/* Small Laptop */
 
 @media (max-width: 1439px) {
   .hero-subtitle {
@@ -3013,5 +3095,78 @@ body {
   .coming {
     font-size: clamp(13px, 0.9vw, 18px);
     gap: 10px;
+  }
+
+  .line-vertical {
+    bottom: 32.5%;
+    top: 35.5%;
+  }
+
+  .line-diagonal {
+    top: 31%;
+    bottom: 26.6%;
+    left: 32%;
+  }
+
+  .line-horizontal {
+    top: 35%;
+  }
+}
+
+@media (max-width: 1536px) {
+  /* laptop scale 125% */
+  .line-vertical {
+    bottom: 32.5%;
+    top: 35.7%;
+  }
+
+  .line-diagonal {
+    bottom: 27.6%;
+    transform: rotate(-28.5deg);
+  }
+}
+
+@media (max-width: 1024px) {
+  .line-vertical {
+    bottom: 33.5%;
+    top: 34.7%;
+  }
+
+  .line-diagonal {
+    bottom: 28.6%;
+    transform: rotate(-28.5deg);
+  }
+}
+
+@media (max-width: 920px) {
+  .line-vertical {
+    bottom: 32.9%;
+    top: 34.7%;
+  }
+
+  .line-diagonal {
+    bottom: 27.6%;
+    transform: rotate(-27.5deg);
+  }
+
+      .line-horizontal {
+        top: 34%;
+    }
+}
+
+@media (max-width: 900px) {
+  .line-vertical {
+    bottom: 33.5%;
+    top: 31.7%;
+  }
+
+  .line-diagonal {
+    bottom: 29.6%;
+    transform: rotate(-23.5deg);
+    top: 28%;
+  }
+
+  .line-horizontal {
+    top: 32%;
   }
 }
