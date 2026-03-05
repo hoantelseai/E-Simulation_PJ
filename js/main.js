@@ -23,3 +23,13 @@ const headerInner = document.querySelector('.header-inner');
 menuToggle?.addEventListener('click', () => {
   headerInner?.classList.toggle('is-open');
 });
+
+
+const menuBtn = document.querySelector(".menu-toggle-sp");
+const menu = document.querySelector(".sp-menu");
+
+menuBtn.addEventListener("click", () => {
+  menu.classList.toggle("active");
+  menuBtn.classList.toggle("active");
+  document.body.classList.toggle("menu-open");
+});

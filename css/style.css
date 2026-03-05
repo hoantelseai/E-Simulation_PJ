@@ -33,11 +33,7 @@ body {
 
 .header-pc {
   position: sticky;
-  /* top: 1vw; */
   top: 0;
-  /* left: 50%;
-  transform: translateX(-50%); */
-  /* width: 94%; */
   z-index: 1000;
 }
 
@@ -83,11 +79,16 @@ body {
   align-items: center;
   padding: 12px 16px;
   height: 64px;
-  background: rgba(255, 255, 255, 0.9);
+  /* background: rgba(255, 255, 255, 0.9); */
+  background: #ffffff;
 }
 
 /* Logo SP */
 .logo-sp img {
+  height: 38px;
+}
+
+.sp-menu-header img {
   height: 38px;
 }
 
@@ -111,15 +112,31 @@ body {
 .menu-icon {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  width: 20px;
+  position: relative;
+  width: 24px;
+  height: 18px;
 }
 
 .menu-icon span {
-  display: block;
-  height: 2px;
+  position: absolute;
+  left: 0;
   width: 100%;
+  height: 2px;
   background: #598cb3;
+  transition: all 0.3s ease;
+}
+
+/* 3 line */
+.menu-icon span:nth-child(1) {
+  top: 0;
+}
+
+.menu-icon span:nth-child(2) {
+  top: 8px;
+}
+
+.menu-icon span:nth-child(3) {
+  bottom: 0;
 }
 
 .nav {
@@ -234,17 +251,8 @@ body {
    Hero
 ============================= */
 
-/* .hero {
-  position: relative;
-  height: 100vh;
-  background: url("../assets/images/005.jpg") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  padding: 0 5vw;
-} */
 .hero {
   position: relative;
-  /* height: 100vh; */
   padding: 3vw clamp(20px, 4.74vw, 91px);
   margin: 0 2vw;
   display: flex;
@@ -275,7 +283,7 @@ body {
 
 .hero-tagline {
   font-size: clamp(12px, calc(0.3vw + 11px), 15px);
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 2vw;
   line-height: 0.81;
   letter-spacing: 0.15em;
@@ -290,7 +298,7 @@ body {
 }
 
 .hero-description {
-  font-weight: 500;
+  font-weight: 600;
   font-size: clamp(16px, calc(0.5vw + 14px), 20px);
   letter-spacing: 0.12em;
   margin-bottom: 2vw;
@@ -298,15 +306,18 @@ body {
 
 .machine-type {
   font-size: clamp(16px, 1vw, 16px);
+  font-weight: 600;
 }
 
 .machine-type-below {
   font-size: clamp(12px, 0.8vw, 14px);
+  font-weight: 400;
 }
 
 .machine-name {
+  font-family: "Anton", sans-serif;
   font-size: clamp(34px, 3vw, 48px);
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .hero-bottom {
@@ -348,7 +359,7 @@ body {
 
 .btn-main {
   font-size: clamp(16px, calc(0.9vw + 12px), 24px);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .coming {
@@ -408,7 +419,6 @@ body {
   bottom: 0vw;
   background: rgba(255, 255, 255, 0.95);
   padding: 1.2vw 2vw;
-  /* border-radius: 0.6vw; */
   max-width: 40vw;
   z-index: 2;
 }
@@ -416,6 +426,7 @@ body {
 .hero-notice p {
   color: #333;
   font-size: clamp(12px, calc(0.3vw + 11px), 14px);
+  font-weight: 400;
 }
 
 /* =============================
@@ -423,13 +434,11 @@ body {
 =============================  */
 .about {
   position: relative;
-  /* padding: clamp(80px, 10vw, 140px) 5vw; */
   background: var(--white);
   color: var(--primary);
 }
 
 .about-container {
-  /* max-width: 1800px; */
   margin: 0 auto;
 }
 
@@ -441,15 +450,8 @@ body {
 }
 
 .about-main {
-  /* display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2vw;
-  flex-wrap: wrap; */
-
   display: block;
   text-align: center;
-  /* max-width: 1100px; */
   width: 100%;
 }
 
@@ -459,8 +461,6 @@ body {
 
 .about-left,
 .about-right {
-  /* flex: 1;
-  min-width: 300px; */
   width: 100%;
 }
 
@@ -475,7 +475,7 @@ body {
 
 .about-title-ja {
   font-size: clamp(18px, 1.8vw, 36px);
-  font-weight: 600;
+  font-weight: 500;
   line-height: clamp(40px, 4vw, 66.4px);
   color: #2d2d2d;
 }
@@ -489,14 +489,6 @@ body {
   font-weight: 400;
   margin-top: 8px;
 }
-
-/* .about-divider {
-  width: 1px;
-  background-color: #c4c4c4;
-  align-self: stretch;
-  flex-shrink: 0;
-  margin: 0 clamp(16px, 2vw, 40px);
-} */
 
 .about-title-en {
   font-family: "Anton", sans-serif;
@@ -530,7 +522,7 @@ body {
 
 .about-description {
   font-size: clamp(16px, calc(1vw + 5px), 24px);
-  font-weight: 400;
+  font-weight: 500;
   line-height: clamp(28px, 2.5vw, 51px);
   letter-spacing: 0.25em;
   color: #272727;
@@ -544,20 +536,10 @@ body {
 =============================  */
 
 .about-spec-section {
-  /* background: linear-gradient(
-    100deg,
-    #0f65a4 0%,
-    #136cab 30%,
-    #1571b6 48%,
-    #2c8dd3 75%,
-    #53adef 100%
-  ); */
-
   overflow: hidden;
   display: flex;
   flex-direction: row;
   color: #ffffff;
-  /* margin-top: clamp(40px, 5vw, 80px); */
 }
 
 .about-spec-section-inner {
@@ -567,7 +549,6 @@ body {
   padding-left: clamp(20px, 11.46vw, 220px);
   padding-right: clamp(20px, 11.46vw, 220px);
   display: flex;
-  /* align-items: stretch; */
   align-items: flex-start;
   gap: clamp(40px, 4vw, 80px);
 }
@@ -616,11 +597,9 @@ body {
 
 .spec-content {
   flex: 1;
-  /* padding: clamp(24px, 2vw, 48px) 0; */
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   position: relative;
   z-index: 2;
   padding-bottom: 3vw;
@@ -629,10 +608,10 @@ body {
 .spec-content::after {
   content: "";
   position: absolute;
-  left: -100vw; /* kéo full ra trái */
+  left: -100vw;
   right: -100vw;
   bottom: 0;
-  top: 22%; /* chỉnh % này để bắt đầu từ sau title lớn */
+  top: 22%;
   background: #e6f0f9;
   z-index: -1;
 }
@@ -666,10 +645,9 @@ body {
 .spec-subtitle {
   font-family: "Noto Sans", sans-serif;
   font-size: clamp(18px, calc(1.2vw + 6px), 24px);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1;
   letter-spacing: 0.08em;
-  /* margin-bottom: clamp(12px, 1vw, 20px); */
   margin-bottom: 0.5vw;
   color: #00081a;
 }
@@ -712,7 +690,6 @@ body {
   font-weight: 700;
   margin-bottom: 1vw;
   display: inline-block;
-  /* border-bottom: 3px solid rgba(255, 255, 255, 0.4); */
   padding: 0.2vw 1.5vw;
   color: #ffffff;
   background: #005ba7;
@@ -722,9 +699,8 @@ body {
   list-style: none;
   font-family: "Noto Sans", sans-serif;
   font-size: clamp(14px, calc(0.6vw + 8px), 16px);
-  font-weight: 500;
   line-height: clamp(22px, 1.8vw, 43px);
-  letter-spacing: 0.16em;
+  letter-spacing: 0.02em;
   padding: 0;
   color: #00081a;
   background: #ffffff;
@@ -735,21 +711,10 @@ body {
   margin-bottom: 1vw;
   position: relative;
   font-weight: 400;
-  /* padding-left: 1.8em; */
 }
-
-/* .spec-list li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: #ffffff;
-  font-size: 1.4em;
-  line-height: 1;
-} */
 
 .spec-list strong {
   display: inline-block;
-  /* min-width: clamp(140px, 10vw, 180px); */
   font-weight: 400;
 }
 
@@ -782,17 +747,13 @@ body {
   align-items: center;
   justify-content: center;
   gap: clamp(12px, 1.2vw, 20px);
-  background: linear-gradient(
-    90deg,
-    #ff6b35 0%,
-    #ff8c00 100%
-  ); /* Orange gradient */
+  background: linear-gradient(90deg, #ff6b35 0%, #ff8c00 100%);
   color: #ffffff;
   font-size: clamp(15px, calc(1vw + 5px), 24px);
   font-weight: 700;
   letter-spacing: 0.02em;
   padding: clamp(18px, 2vw, 28px) clamp(40px, 5vw, 80px);
-  border-radius: 999px; /* Pill shape */
+  border-radius: 999px;
   text-decoration: none;
   box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
   transition: all 0.3s ease;
@@ -847,16 +808,16 @@ body {
   transition: transform 0.35s ease;
 }
 
-/* Coming Soon nhỏ */
+/* Coming Soon */
 .coming-soon-text {
   font-size: clamp(14px, calc(1vw + 6px), 24px);
   font-weight: 600;
-  color: var(--accent); /* #e6483d hoặc orange */
+  color: var(--accent);
   margin: clamp(16px, 2vw, 28px) 0;
   letter-spacing: 0.1em;
 }
 
-/* Note nhỏ ở dưới */
+/* Note */
 .cta-note {
   font-size: clamp(12px, calc(0.4vw + 10px), 16px);
   color: #222222;
@@ -933,7 +894,6 @@ body {
 
 /* Video cards */
 .test-video-cards {
-  /* max-width: 1400px; */
   margin: -7vw auto 4vw;
   padding: 0 clamp(20px, 11.46vw, 220px);
   display: grid;
@@ -981,7 +941,6 @@ body {
 
 .test-menu,
 .test-products {
-  /* flex: 1; */
   color: #1a1a1a;
 }
 
@@ -1002,7 +961,6 @@ body {
   padding: 0;
   margin: 0;
   line-height: 2;
-  /* font-size: clamp(14px, 1vw, 18px); */
   font-size: 16px;
 }
 
@@ -1012,22 +970,9 @@ body {
 }
 
 .test-products p {
-  /* font-size: clamp(14px, 1vw, 18px); */
   font-size: 16px;
   line-height: 2;
 }
-
-/* Responsive */
-/* @media (max-width: 1024px) {
-  .test-video-cards {
-    flex-direction: column;
-    margin-top: -40px;
-  }
-
-  .test-info {
-    flex-direction: column;
-  }
-} */
 
 /* =============================
    Products Section
@@ -1039,19 +984,6 @@ body {
   background: url("../assets/images/Rectangle\ 871.png") center/cover no-repeat;
   overflow: hidden;
 }
-
-/* grid background pattern */
-/* .products::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
-  background-size: 40px 40px;
-  pointer-events: none;
-  z-index: 1;
-} */
 
 .products-inner {
   position: relative;
@@ -1122,8 +1054,6 @@ body {
   letter-spacing: 0.02em;
   color: #151515;
   margin-top: 1vw;
-  /* text-decoration: underline;
-  text-underline-offset: 4px; */
 }
 
 .product-text {
@@ -1134,7 +1064,7 @@ body {
   margin-top: 0.5vw;
 }
 
-/* Hover zoom mượt hơn */
+/* Hover zoom*/
 .product-link:hover img {
   transform: scale(1.06);
 }
@@ -1268,12 +1198,6 @@ body {
   color: #93c2df;
 }
 
-/* .facility-line {
-  width: 1px;
-  height: 80px;
-  background: rgba(255, 255, 255, 0.5);
-} */
-
 /* TEXT */
 .facility-text {
   font-size: clamp(16px, calc(0.6vw + 8px), 20px);
@@ -1284,13 +1208,6 @@ body {
   color: #00081a;
 }
 
-/* RIGHT BACKGROUND IMAGE */
-/* .facility-bg {
-  width: clamp(220px, 18vw, 341px);
-  height: clamp(160px, 14vw, 249px);
-  background: url("../assets/images/a 1.png") no-repeat center/contain;
-  flex-shrink: 0;
-} */
 /* =============================
    Exterior Section
 ============================= */
@@ -1304,7 +1221,6 @@ body {
 
 .exterior-hero {
   position: relative;
-  /* height: clamp(400px, 45vw, 720px); */
   background: url("../assets/images/IMG_6658\ 4.png") center/cover no-repeat;
   display: flex;
   flex-direction: column;
@@ -1477,7 +1393,6 @@ body {
 
 .entrance-description {
   margin-top: clamp(24px, 2vw, 40px);
-  /* font-size: clamp(16px, 1vw, 18px); */
   font-size: 16px;
   line-height: 2.11;
   letter-spacing: 0.14em;
@@ -1589,7 +1504,7 @@ body {
   width: 2px;
   background: #6fa0bb;
   top: 31%;
-  bottom: 27.2%;
+  bottom: 26.2%;
   left: 32%;
   transform: rotate(-26deg);
   transform-origin: top;
@@ -1849,7 +1764,8 @@ body {
 }
 
 .process-card p {
-  font-size: clamp(14px, calc(0.104vw + 12.5px), 15px);
+  font-size: clamp(14px, calc(0.156vw + 12px), 15px);
+  /* font-size: 15px; */
   line-height: clamp(24px, calc(0.208vw + 22px), 26px);
   color: #444;
 }
@@ -1861,9 +1777,6 @@ body {
 .news {
   padding-top: clamp(80px, 10vw, 140px);
   padding-bottom: clamp(80px, 10vw, 140px);
-  /* padding-left: clamp(20px, 20vw, 419px);
-  padding-right: clamp(20px, 20vw, 419px); */
-
   padding-left: clamp(20px, calc(20vw - 80px), 400px);
   padding-right: clamp(20px, calc(20vw - 80px), 400px);
   color: #222;
@@ -1904,7 +1817,6 @@ body {
 }
 
 .news-date {
-  /* font-size: clamp(15px, 1.3vw, 17px); */
   font-size: 15px;
   line-height: clamp(24px, 1.6vw, 30px);
   letter-spacing: 0.03em;
@@ -1949,7 +1861,6 @@ body {
 }
 
 .footer-info {
-  /* font-size: clamp(14px, 0.9vw, 17px); */
   font-size: 15px;
   line-height: clamp(22px, 1.6vw, 30px);
   letter-spacing: 0.04em;
@@ -1957,7 +1868,6 @@ body {
 }
 
 .footer-map {
-  /* font-size: clamp(14px, 0.9vw, 16px); */
   font-size: 15px;
   color: #cfe8ff;
   text-decoration: none;
@@ -1988,13 +1898,9 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   padding: clamp(14px, 1.2vw, 20px) clamp(28px, 2.2vw, 40px);
-
-  /* font-size: clamp(14px, 0.9vw, 17px); */
   font-size: 16px;
   letter-spacing: 0.08em;
-
   border-radius: 6px;
   text-decoration: none;
   overflow: hidden;
@@ -2077,75 +1983,7 @@ body {
     padding-right: 30px;
   }
 }
-/* Responsive: Stack dọc trên tablet/mobile */
-/* @media (max-width: 1024px) {
-  .about-spec-section {
-    flex-direction: column;
-  }
-  .spec-image {
-    flex: 0 0 auto;
-    height: 60vh;
-    min-width: auto;
-  }
-  .spec-content {
-    padding: clamp(40px, 8vw, 70px) clamp(30px, 6vw, 50px);
-  }
 
-  .test-menu-section {
-    flex-direction: column;
-  }
-
-  .products-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .entrance-content {
-    grid-template-columns: 1fr;
-    row-gap: clamp(40px, 6vw, 80px);
-  }
-
-  .meeting-bottom {
-    flex-direction: column;
-  }
-
-  .meeting-item {
-    width: 100%;
-  }
-
-  .meeting-top-text {
-    max-width: 100%;
-  }
-
-  .process-cards {
-    flex-wrap: wrap;
-  }
-
-  .process-card {
-    flex: 1 1 45%;
-  }
-
-  .process-steps {
-    flex-wrap: wrap;
-  }
-
-  .step {
-    flex: 1 1 50%;
-  }
-}
-
-@media (max-width: 768px) {
-  .spec-main-title {
-    font-size: clamp(32px, 7vw, 52px);
-  }
-  .spec-lead br {
-    display: none;
-  }
-  .test-description br {
-    display: none;
-  }
-} */
-
-/* Mặc định: SP ẩn */
 .hero-sp,
 .hero-sp-notice {
   display: none;
@@ -2159,6 +1997,99 @@ body {
   display: none;
 }
 
+/* ==========================
+   Mobile Menu
+========================== */
+.sp-menu {
+  display: none;
+}
+
+.sp-menu.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* menu center */
+
+.sp-menu-inner {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.sp-menu-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.sp-menu-nav a {
+  text-decoration: none;
+  color: #1c2530;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+}
+
+/* bottom buttons */
+
+.sp-menu-buttons {
+  display: flex;
+  width: 100%;
+}
+
+.sp-btn {
+  width: 50%;
+  padding: 20px 10px;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.sp-btn-blue {
+  background: #3a9db8;
+}
+
+.sp-btn-red {
+  background: #c94b4b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-icon span {
+  transition: 0.3s;
+}
+
+.menu-toggle-sp.active .menu-icon span {
+  background: #696969; /* đổi sang đen */
+}
+
+.menu-toggle-sp.active .menu-icon span:nth-child(1) {
+  top: 8px;
+  transform: rotate(45deg);
+}
+
+.menu-toggle-sp.active .menu-icon span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle-sp.active .menu-icon span:nth-child(3) {
+  bottom: auto;
+  top: 8px;
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+  .sp-menu-nav {
+    gap: 20px;
+  }
+}
 /* Mobile */
 @media (max-width: 768px) {
   .header-pc {
@@ -2173,10 +2104,45 @@ body {
     display: none;
   }
 
+  .sp-menu {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    /* height: calc(100vh - 64px); */
+    height: calc(100dvh - 64px);
+    overflow-y: auto;
+    background: #efefef;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+
+    transition: all 0.3s ease;
+    z-index: 999;
+  }
   .hero-sp,
   .hero-sp-notice {
     display: block;
     color: #00081a;
+  }
+
+  .sp-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    height: 64px;
+  }
+
+  .sp-menu.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
 
   .hero-sp {
@@ -2274,7 +2240,6 @@ body {
   .hero-sp-notice {
     background: #f2f2f2;
     padding: 30px 17px;
-    /* font-size: clamp(12px, 2.7vw, 14px); */
     font-size: 14px;
     line-height: 1.6;
   }
@@ -2290,7 +2255,6 @@ body {
     gap: 24px;
   }
 
-  /* Ẩn divider dọc trên SP */
   .about-divider {
     display: none;
   }
@@ -2312,7 +2276,7 @@ body {
     white-space: normal;
     text-align: center;
     line-height: 32px;
-    letter-spacing: 0.1em; /* 10% */
+    letter-spacing: 0.1em;
     color: #00081a;
   }
 
@@ -2320,7 +2284,7 @@ body {
     display: block;
     margin-left: 0;
     margin-top: clamp(6px, 1vw, 12px);
-    letter-spacing: 0.02em; /* 2% */
+    letter-spacing: 0.02em;
     color: #00081a;
   }
 
@@ -2385,7 +2349,6 @@ body {
 
   /* CONTENT */
   .spec-content {
-    /* padding: 40px 0 60px; */
     padding: clamp(30px, 5vw, 80px) 0 0;
   }
 
@@ -2397,12 +2360,12 @@ body {
     padding: 0 17px;
   }
 
-  /* TITLE trắng full width */
+  /* TITLE */
   .spec-main-title {
     width: 100%;
     font-size: clamp(30px, 3vw, 40px);
     line-height: 28px;
-    letter-spacing: 0.01em; /* 1% */
+    letter-spacing: 0.01em;
     padding: 0 17px;
     margin-bottom: clamp(13px, 2vw, 60px);
     color: #00081a;
@@ -2411,7 +2374,7 @@ body {
   .title-top {
     padding: 0 17px;
     font-size: clamp(30px, 3vw, 40px);
-    letter-spacing: 0.04em; /* 4% */
+    letter-spacing: 0.04em;
     color: #00081a;
   }
 
@@ -2421,7 +2384,7 @@ body {
     margin-top: clamp(24px, 5vw, 80px);
   }
   .spec-subtitle {
-    letter-spacing: 0.02em; /* 2% */
+    letter-spacing: 0.02em;
     margin: clamp(16px, 3vw, 32px) 0 5px;
     text-align: center;
   }
@@ -2431,9 +2394,8 @@ body {
   }
 
   .spec-lead {
-    /* font-size: clamp(16px, 1.8vw, 18px); */
     line-height: 1.8;
-    letter-spacing: 0.02em; /* 2% */
+    letter-spacing: 0.02em;
     margin-bottom: clamp(25px, 3vw, 32px);
   }
 
@@ -2446,9 +2408,8 @@ body {
     position: relative;
     font-size: clamp(18px, 2vw, 24px);
     line-height: 28.3px;
-    letter-spacing: 0.15em; /* 15% */
+    letter-spacing: 0.15em;
     padding: clamp(6px, 1vw, 12px) clamp(16px, 2vw, 24px);
-    /* margin-bottom: clamp(16px, 3vw, 32px); */
     color: #ffff;
     background: #005ba7;
     width: 100%;
@@ -2458,7 +2419,7 @@ body {
   .spec-list ul {
     font-size: clamp(16px, 1.8vw, 18px);
     line-height: 36px;
-    letter-spacing: 0.02em; /* 2% */
+    letter-spacing: 0.02em;
     color: #00081a;
     font-weight: 400;
     background: none;
@@ -2466,7 +2427,6 @@ body {
   }
 
   .spec-list li {
-    /* margin-bottom: clamp(10px, 2vw, 20px); */
     margin-bottom: 0;
   }
 
@@ -2506,7 +2466,6 @@ body {
   }
 
   .coming-soon-text {
-    /* font-size: clamp(11px, 1vw, 12.25px); */
     letter-spacing: 0.04em;
     margin: clamp(12px, 1.5vw, 16px) 0;
   }
@@ -2565,7 +2524,6 @@ body {
   }
   .test-menu h3,
   .test-products h3 {
-    /* font-size: 16px; */
     margin-bottom: 16px;
   }
 
@@ -2709,7 +2667,7 @@ body {
   }
 
   .exterior-description {
-    text-align: left; /* mobile thường căn trái */
+    text-align: left;
     padding-top: 0;
     line-height: 28px;
   }
@@ -2797,8 +2755,8 @@ body {
   .meeting-top-sp {
     display: block;
     flex-direction: column;
-    align-items: center; /* Căn giữa ngang */
-    text-align: center; /* Text căn giữa */
+    align-items: center;
+    text-align: center;
   }
 
   .meeting-sp-image {
@@ -2844,10 +2802,6 @@ body {
 
   /* ===== Top ===== */
 
-  /* .meeting-top {
-    margin-top: 40px;
-  } */
-
   .meeting-plan-label {
     font-size: 12px;
   }
@@ -2886,7 +2840,6 @@ body {
 
   /* <!-- ===== Process Smartphone Layout ===== --> */
 
-  /* Ẩn PC layout */
   .process-steps,
   .process-cards {
     display: none;
@@ -2982,10 +2935,6 @@ body {
     padding: 60px 20px;
   }
 
-  /* .news-header {
-    margin-bottom: 40px;
-  } */
-
   .news-title {
     margin-bottom: 6px;
   }
@@ -2995,7 +2944,7 @@ body {
   }
 
   .news-item {
-    display: block; /* bỏ flex */
+    display: block;
     padding: 20px 0;
     border-bottom: 1px solid #c4c4c4;
   }
@@ -3065,129 +3014,4 @@ body {
     font-size: clamp(13px, 0.9vw, 18px);
     gap: 10px;
   }
-  /* 
-  .about-title-en {
-    font-size: clamp(34px, 3.5vw, 65px);
-  }
-
-  .spec-main-title {
-    font-size: clamp(22px, 2.5vw, 50px);
-  }
-
-  .about-description {
-    font-size: clamp(15px, calc(0.8vw + 6px), 20px);
-  }
-
-  .spec-eyebrow {
-    font-size: clamp(12px, calc(0.5vw + 6px), 16px);
-  }
-
-  .spec-subtitle {
-    font-size: clamp(17px, calc(1vw + 5px), 22px);
-  }
-
-  .spec-lead {
-    font-size: clamp(15px, calc(0.4vw + 9px), 17px);
-  }
-
-  .spec-list-title {
-    font-size: clamp(12px, calc(0.5vw + 7px), 16px);
-  }
-
-  .spec-list ul {
-    font-size: clamp(14px, calc(0.5vw + 7px), 15px);
-  }
-
-  .cta-text {
-    font-size: clamp(15px, calc(0.5vw + 7px), 18px);
-  }
-
-  .btn-consult {
-    font-size: clamp(14px, calc(0.8vw + 4px), 20px);
-  }
-
-  .coming-soon-text {
-    font-size: clamp(14px, calc(0.8vw + 5px), 20px);
-  }
-
-  .cta-note {
-    font-size: clamp(12px, calc(0.3vw + 9px), 14px);
-  }
-
-  .test-label {
-    font-size: clamp(18px, calc(0.6vw + 12px), 22px);
-  }
-
-  .test-label-en {
-    font-size: clamp(10px, calc(0.6vw + 6px), 13px);
-  }
-
-  .test-title {
-    font-size: clamp(24px, calc(2vw + 6px), 40px);
-    line-height: clamp(32px, 4vw, 72px);
-  }
-
-  .test-description {
-    font-size: clamp(15px, calc(0.5vw + 7px), 18px);
-    line-height: clamp(22px, 2vw, 36px);
-  }
-
-  .video-overlay span {
-    font-size: clamp(14px, calc(0.5vw + 8px), 16px);
-  }
-
-  .test-menu h3,
-  .test-products h3 {
-    font-size: clamp(17px, calc(0.6vw + 8px), 18px);
-  }
-
-  .test-menu ul,
-  .test-products p {
-    font-size: 16px;
-  }
-
-  .products-title {
-    font-size: clamp(18px, calc(0.8vw + 8px), 22px);
-  }
-
-  .product-text {
-    font-size: clamp(14px, calc(0.4vw + 10px), 15px);
-  }
-
-  .products-subtitle {
-    font-size: clamp(12px, calc(0.4vw + 8px), 13px);
-  }
-
-  .products-description {
-    font-size: clamp(15px, calc(0.5vw + 7px), 18px);
-  }
-
-  .product-title {
-    font-size: clamp(14px, calc(0.4vw + 10px), 15px);
-  }
-
-  .btn-products {
-    font-size: clamp(14px, calc(0.4vw + 10px), 15px);
-  }
-
-   .facility-title {
-    font-size: clamp(18px, calc(1vw + 6px), 24px);
-  }
-
-  .exterior-title {
-    font-size: clamp(18px, calc(1.2vw + 4px), 22px);
-  }
-
-  .entrance-title,
-  .meeting-title {
-    font-size: clamp(14px, calc(1vw + 4px), 20px);
-  }
-
-  .facility-text {
-    font-size: clamp(15px, calc(0.5vw + 8px), 18px);
-  }
-
-  .meeting-plan-label {
-    font-size: clamp(12px, calc(0.6vw + 8px), 16px);
-  } */
 }
