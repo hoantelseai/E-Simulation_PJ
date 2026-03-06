@@ -269,7 +269,8 @@ body {
 
 .hero-subtitle {
   font-family: "Roboto", sans-serif;
-  font-size: clamp(21.26px, 5.05vw, 94.82px);
+  /* font-size: clamp(21.26px, 5.05vw, 94.82px); */
+  font-size: clamp(32px, 2.4vw, 45.55px);
   font-weight: 800;
   line-height: 0.99;
   letter-spacing: 0.07em;
@@ -278,7 +279,8 @@ body {
 
 .title-thin {
   font-weight: 200;
-  font-size: clamp(13.58px, 2.7vw, 55px);
+  /* font-size: clamp(13.58px, 2.7vw, 55px); */
+  font-size: clamp(18px, 1.5vw, 29.1px);
 }
 
 .hero-tagline {
@@ -290,7 +292,8 @@ body {
 }
 
 .hero-title {
-  font-size: clamp(35.42px, calc(2.8vw + 24px), 45px);
+  /* font-size: clamp(35.42px, calc(2.8vw + 24px), 45px); */
+  font-size: clamp(40px, 3.5vw, 66.71px);
   font-weight: 800;
   margin-bottom: 2vw;
   line-height: 1.38;
@@ -2054,58 +2057,6 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* 
-@media (max-width: 1024px) {
-  .about-spec-section-inner {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
-  .cta-consult {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
-  .test-video-cards {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
-  .products-inner {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
-  .facility-inner {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
-  .exterior-images {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
-  .entrance {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
-  .meeting {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
-  .process {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
-  .site-footer {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-} */
 
 @media (max-width: 1024px) {
   .about-spec-section-inner,
@@ -3118,13 +3069,13 @@ body {
 /* Small Laptop */
 
 @media (max-width: 1439px) {
-  .hero-subtitle {
+  /* .hero-subtitle {
     font-size: clamp(32px, 4.2vw, 72px);
-  }
+  } */
 
-  .hero-title {
+  /* .hero-title {
     font-size: clamp(32px, calc(2.4vw + 18px), 40px);
-  }
+  } */
 
   .hero-description {
     font-size: clamp(15px, calc(0.4vw + 13px), 18px);
