@@ -47,12 +47,13 @@
     <!-- JS: defer để không block rendering -->
 
     <!-- ===== Header ===== -->
-    <header class="header-pc">
-        <div class="header-inner">
-            <div class="logo">
-                <img src="./assets/images/logo-big.jpg" alt="三洋工業ロゴ">
-            </div>
-            <!-- 
+    <header class="header">
+        <div class="header-pc">
+            <div class="header-inner">
+                <a href="#" class="logo">
+                    <img src="./assets/images/logo-big.jpg" alt="三洋工業ロゴ">
+                </a>
+                <!-- 
             <button class="menu-toggle" type="button" aria-label="メニューを開く">
                 <span class="menu-toggle-text">MENU</span>
                 <span class="menu-toggle-icon" aria-hidden="true">
@@ -62,30 +63,48 @@
                 </span>
             </button> -->
 
-            <nav class="nav">
-                <ul>
-                    <li><a href="#">試験機の仕様</a></li>
-                    <li><a href="#">試験映像</a></li>
-                    <li><a href="#">施設内容</a></li>
-                </ul>
-            </nav>
+                <nav class="nav" aria-label="メインナビゲーション">
+                    <ul>
+                        <li><a href="#">試験機の仕様</a></li>
+                        <li><a href="#">試験映像</a></li>
+                        <li><a href="#">施設内容</a></li>
+                    </ul>
+                </nav>
 
-            <div class="header-buttons">
-                <a href="#" class="btn btn-light">リーフレットダウンロード</a>
-                <a href="#" class="btn btn-primary">お問い合わせ</a>
+                <div class="header-buttons">
+                    <a href="#" class="btn btn-light">リーフレットダウンロード</a>
+                    <a href="#" class="btn btn-primary">お問い合わせ</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="header-sp">
+            <div class="header-sp-inner">
+                <a href="#" class="logo-sp">
+                    <img src="./assets/images/logo-big.jpg" alt="三洋工業ロゴ">
+                </a>
+
+                <button class="menu-toggle-sp" type="button">
+                    <!-- <span class="menu-text">MENU</span> -->
+                    <span class="menu-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
             </div>
         </div>
     </header>
 
     <!-- ===== Header SP ===== -->
-    <header class="header-sp">
+    <!-- <header class="header-sp">
         <div class="header-sp-inner">
-            <div class="logo-sp">
+            <a href="#" class="logo-sp">
                 <img src="./assets/images/logo-big.jpg" alt="三洋工業ロゴ">
-            </div>
+            </a>
 
             <button class="menu-toggle-sp" type="button">
-                <!-- <span class="menu-text">MENU</span> -->
                 <span class="menu-icon">
                     <span></span>
                     <span></span>
@@ -93,14 +112,14 @@
                 </span>
             </button>
         </div>
-    </header>
+    </header> -->
 
     <!-- ===== Mobile Menu ===== -->
     <div class="sp-menu">
 
         <div class="sp-menu-inner">
 
-            <nav class="sp-menu-nav">
+            <nav class="sp-menu-nav" aria-label="モバイルメニュー">
                 <a href="#">TOP</a>
                 <a href="#">試験機の仕様</a>
                 <a href="#">試験映像</a>
@@ -172,16 +191,16 @@
             <div class="hero-sp-overlay"></div>
 
             <div class="hero-sp-inner">
-                <p class="hero-sp-subtitle">Trusted<soan class="title-thin">&</soan>Safety</p>
+                <p class="hero-sp-subtitle">Trusted<span class="title-thin">&</span>Safety</p>
                 <p class="hero-sp-tagline">
                     安全と信頼で次世代へ繋ぐ 明日を作る
                 </p>
 
-                <h1 class="hero-sp-title">
+                <h2 class="hero-sp-title">
                     地震動を<br>
                     高精度に<br>
                     再現。
-                </h1>
+                </h2>
 
                 <div class="hero-sp-product">
                     <p class="hero-sp-type">三次元振動試験機</p>
@@ -206,20 +225,20 @@
             </div>
         </section>
 
-        <section class="hero-sp-notice">
+        <div class="hero-sp-notice">
             <p>
                 新着情報　2026.X.XX<br>
                 三次元振動試験機「E-Simulation」のサイトを公開しました
             </p>
-        </section>
+        </div>
 
         <!-- ===== ABOUT Section ===== -->
         <section class="about">
             <div class="about-container">
                 <div class="about-intro">
 
-                    <!-- ABOUT nằm trên cùng -->
-                    <!-- <p class="about-label">ABOUT</p> -->
+                    <!-- ABOUT -->
+                    <p class="about-label">ABOUT</p>
 
                     <!-- Wrapper -->
                     <div class="about-main">
@@ -286,8 +305,6 @@
                                         <li><strong>・最大加振力</strong>： 392kN（三方向共）</li>
                                         <li><strong>・最大変位</strong>：600mm（水平）150mm（垂直）</li>
                                         <li><strong>・最大加速度</strong>： 2.0G（10ton負荷時）</li>
-                                        <!-- <li><strong>・周波数範囲</strong>：2.0G（10ton荷重時）
-                                    </li> -->
                                         <li><strong>・周波数範囲</strong>：〇〇〇〇〇〇〇〇</li>
                                         <li><strong>・最大搭載質量</strong>：10ton</li>
                                         <li><strong>・試験台寸法 </strong>：5m×5m</li>
@@ -403,10 +420,10 @@
                     <article class="product-card">
                         <div class="product-image">
                             <a href="#" class="product-link">
-                                <img src="./assets/images/Rectangle 846.png" alt="SZシーリングシリーズ" />
-                                <!-- <span class="product-arrow">
+                                <img src="./assets/images/Rectangle 846.png" alt="SZシーリングシリーズ 製品画像" />
+                                <span class="product-arrow">
                                     <img src="./assets/images/Group 590.png" alt="詳細を見る" />
-                                </span> -->
+                                </span>
                             </a>
                         </div>
                         <h3 class="product-title">SZシーリングシリーズ</h3>
@@ -416,10 +433,10 @@
                     <article class="product-card">
                         <div class="product-image">
                             <a href="#" class="product-link">
-                                <img src="./assets/images/Rectangle 847.png" alt="SZシーリングシリーズ" />
-                                <!-- <span class="product-arrow">
+                                <img src="./assets/images/Rectangle 847.png" alt="サンバランス 製品画像" />
+                                <span class="product-arrow">
                                     <img src="./assets/images/Group 590.png" alt="詳細を見る" />
-                                </span> -->
+                                </span>
                             </a>
                         </div>
                         <h3 class="product-title">サンバランス</h3>
@@ -429,10 +446,10 @@
                     <article class="product-card">
                         <div class="product-image">
                             <a href="#" class="product-link">
-                                <img src="./assets/images/Rectangle 848.png" alt="SZシーリングシリーズ" />
-                                <!-- <span class="product-arrow">
+                                <img src="./assets/images/Rectangle 848.png" alt="スリーパーZG 製品画像" />
+                                <span class="product-arrow">
                                     <img src="./assets/images/Group 590.png" alt="詳細を見る" />
-                                </span> -->
+                                </span>
                             </a>
                         </div>
                         <h3 class="product-title">スリーパーZG</h3>
