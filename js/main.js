@@ -17,6 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// SMARTPHONE MENU
+
 const menuToggle = document.querySelector(".menu-toggle");
 const headerInner = document.querySelector(".header-inner");
 
@@ -35,24 +37,29 @@ menuBtn.addEventListener("click", () => {
   headerSp.classList.toggle("menu-open");
 });
 
-// Animation
-// const observer = new IntersectionObserver(entries => {
-//   entries.forEach(entry => {
-//     if (entry.isIntersecting) {
-//       entry.target.classList.add("show");
-//     }
-//   });
-// }, { threshold: 0.2 });
+// CLOSE MENU WHEN CLICK LINK
+const menuLinks = document.querySelectorAll(".sp-menu a");
 
-// document.querySelectorAll(".fade-up").forEach(el => {
-//   observer.observe(el);
-// });
+menuLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    menu.classList.remove("active");
+    menuBtn.classList.remove("active");
+    document.body.classList.remove("menu-open");
+    headerSp.classList.remove("menu-open");
+  });
+});
 
+// ANIMATION
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("show");
+
+        setTimeout(() => {
+          entry.target.classList.add("finished");
+        }, 1000); // sau khi animation xong
+        observer.unobserve(entry.target);
       }
     });
   },
@@ -79,5 +86,18 @@ window.addEventListener("scroll", () => {
   } else {
     header.classList.remove("scrolled");
   }
+});
+
+/* ===== FIX ANIMATION WHEN ROTATE MOBILE ===== */
+let resizeTimer;
+
+window.addEventListener("resize", () => {
+  document.body.classList.add("resize-stop");
+
+  clearTimeout(resizeTimer);
+
+  resizeTimer = setTimeout(() => {
+    document.body.classList.remove("resize-stop");
+  }, 300);
 });
 
