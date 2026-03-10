@@ -1,3 +1,4 @@
+// NEWS SECTION
 document.querySelector(".scroll-indicator")?.addEventListener("click", () => {
   window.scrollTo({
     top: window.innerHeight,
@@ -112,7 +113,7 @@ window.addEventListener("resize", () => {
   }, 300);
 });
 
-// Hero Animation
+// HERO PC ANIMATIOn
 const bg1 = document.querySelector(".hero-bg-1");
 const bg2 = document.querySelector(".hero-bg-2");
 

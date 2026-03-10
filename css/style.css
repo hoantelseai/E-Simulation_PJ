@@ -68,7 +68,7 @@ section {
 }
 
 .logo img {
-  height: 3vw;
+  height: 44px;
 }
 
 /* ==========================
@@ -121,7 +121,7 @@ body.menu-open .back-to-top {
 
 /* Logo SP */
 .logo-sp img {
-  height: 38px;
+  height: 30px;
 }
 
 .sp-menu-header img {
@@ -2863,6 +2863,9 @@ body.menu-open .back-to-top {
 }
 /* Ipad Air dọc*/
 @media (max-width: 900px) {
+  .logo img {
+    height: 25px;
+}
   .btn-primary {
     width: 140px;
     height: 45px;
