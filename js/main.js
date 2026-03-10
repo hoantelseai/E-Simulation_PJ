@@ -49,6 +49,17 @@ menuLinks.forEach((link) => {
   });
 });
 
+// Back to TOP button
+const backToTop = document.querySelector(".back-to-top");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    backToTop.classList.add("show");
+  } else {
+    backToTop.classList.remove("show");
+  }
+});
+
 // ANIMATION
 const observer = new IntersectionObserver(
   (entries) => {
@@ -64,7 +75,7 @@ const observer = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.5,
+    threshold: 0.15,
   },
 );
 
@@ -100,4 +111,49 @@ window.addEventListener("resize", () => {
     document.body.classList.remove("resize-stop");
   }, 300);
 });
+
+// Hero Animation
+const bg1 = document.querySelector(".hero-bg-1");
+const bg2 = document.querySelector(".hero-bg-2");
+
+let showingFirst = true;
+
+setInterval(() => {
+  if (showingFirst) {
+    bg2.classList.add("show");
+    bg1.classList.remove("show");
+  } else {
+    bg1.classList.add("show");
+    bg2.classList.remove("show");
+  }
+
+  showingFirst = !showingFirst;
+}, 3000);
+
+
+
+/* ===== HERO SP BACKGROUND FADE ===== */
+
+window.addEventListener("load", () => {
+  const bg1 = document.querySelector(".hero-sp-bg-1");
+  const bg2 = document.querySelector(".hero-sp-bg-2");
+
+  if (!bg1 || !bg2) return;
+
+  let showingFirst = true;
+
+  setInterval(() => {
+    if (showingFirst) {
+      bg1.style.opacity = "0";
+      bg2.style.opacity = "1";
+    } else {
+      bg1.style.opacity = "1";
+      bg2.style.opacity = "0";
+    }
+
+    showingFirst = !showingFirst;
+  }, 3000);
+});
+
+
 
