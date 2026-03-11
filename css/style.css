@@ -2869,8 +2869,15 @@ body.menu-open .back-to-top {
     padding-bottom: clamp(10px, 4vw, 15px);
   }
   .hero-sp-cta {
-    display: flex;
+    /* display: flex;
+    width: 100%; */
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
     width: 100%;
+    display: flex;
+    z-index: 999;
   }
   .hero-sp-btn {
     width: 50%;
@@ -2892,6 +2899,7 @@ body.menu-open .back-to-top {
     display: flex;
     justify-content: center;
     align-items: center;
+    pointer-events: none;
   }
   .hero-sp-notice {
     background: #f2f2f2;
@@ -3277,8 +3285,15 @@ body.menu-open .back-to-top {
   }
 
   .hero-sp-cta {
-    display: flex;
+    /* display: flex;
+    width: 100%; */
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
     width: 100%;
+    display: flex;
+    z-index: 999;
   }
 
   .hero-sp-btn {
@@ -3303,6 +3318,7 @@ body.menu-open .back-to-top {
     display: flex;
     justify-content: center;
     align-items: center;
+    pointer-events: none;
   }
 
   .hero-sp-notice {
