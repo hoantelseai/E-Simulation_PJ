@@ -1,0 +1,3 @@
+<FilesMatch "\.(webmanifest|json|ico|png)$">
+    Require all granted
+</FilesMatch>

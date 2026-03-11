@@ -20,6 +20,7 @@ html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
   overflow-anchor: none;
+  overflow-x: hidden;
 }
 
 body {
@@ -27,6 +28,7 @@ body {
   line-height: 1.6;
   color: var(--white);
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 #spec {
   scroll-margin-top: 90px;
@@ -34,6 +36,18 @@ body {
 
 section {
   scroll-margin-top: 90px;
+}
+
+.hero-title {
+  overflow: hidden;
+}
+
+.spec-image {
+  overflow: hidden;
+}
+
+.spec-image img {
+  will-change: transform;
 }
 /* =============================
    Header
@@ -328,7 +342,7 @@ body.menu-open .back-to-top {
 }
 
 .hero-description {
-  font-weight: 600;
+  font-weight: 500;
   font-size: clamp(16px, calc(0.47vw + 14.3px), 23px);
   letter-spacing: 0.12em;
   margin-bottom: 2vw;
@@ -582,7 +596,7 @@ body.menu-open .back-to-top {
   width: 100%;
   align-items: center;
   gap: clamp(40px, 4vw, 80px);
-  background: url("../assets/images/Rectangle\ 855.png") center/cover no-repeat;
+  background: url("../assets/images/Rectangle855.png") center/cover no-repeat;
 }
 
 .spec-image {
@@ -714,7 +728,6 @@ body.menu-open .back-to-top {
   font-family: "Noto Sans", sans-serif;
   font-size: clamp(14px, calc(0.6vw + 8px), 16px);
   line-height: clamp(22px, 1.8vw, 43px);
-  letter-spacing: 0.02em;
   padding: 0;
 }
 
@@ -816,7 +829,7 @@ body.menu-open .back-to-top {
 /* Coming Soon */
 .coming-soon-text {
   font-size: clamp(14px, calc(1vw + 6px), 24px);
-  font-weight: 600;
+  font-weight: 500;
   color: #ff7757;
   margin: clamp(16px, 2vw, 28px) 0;
   letter-spacing: 0.02em;
@@ -853,7 +866,7 @@ body.menu-open .back-to-top {
 /* Hero area */
 .test-video-hero {
   position: relative;
-  background: url("../assets/images/IMG_1290\ 1.png") center/cover no-repeat;
+  background: url("../assets/images/IMG_12901.png") center/cover no-repeat;
   padding: clamp(40px, 3.33vw, 64px) clamp(20px, 11.46vw, 220px)
     clamp(100px, 12vw, 180px);
   color: #fff;
@@ -976,10 +989,10 @@ body.menu-open .back-to-top {
   letter-spacing: 0.08em;
 }
 
-.test-menu li::before {
+/* .test-menu li::before {
   content: "・";
   margin-right: 6px;
-}
+} */
 
 .test-products p {
   font-size: 16px;
@@ -995,7 +1008,7 @@ body.menu-open .back-to-top {
 .products {
   position: relative;
   padding: 8vw 0vw 12vw 0vw;
-  background: url("../assets/images/Vector\ 80.png") center/cover no-repeat;
+  background: url("../assets/images/Vector80.png") center/cover no-repeat;
   overflow: hidden;
 }
 
@@ -1007,6 +1020,7 @@ body.menu-open .back-to-top {
     linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
   background-size: 40px 40px;
+  /* background: url("../assets/images/Mask\ group.png") center/cover no-repeat; */
   pointer-events: none;
   z-index: 1;
 }
@@ -1226,7 +1240,7 @@ body.menu-open .back-to-top {
 .facility-bg {
   width: clamp(220px, 18vw, 341px);
   height: clamp(160px, 14vw, 249px);
-  background: url("../assets/images/a 1.png") no-repeat center/contain;
+  background: url("../assets/images/a1.png") no-repeat center/contain;
   flex-shrink: 0;
 }
 /* =============================
@@ -1242,7 +1256,7 @@ body.menu-open .back-to-top {
 
 .exterior-hero {
   position: relative;
-  background: url("../assets/images/IMG_6658\ 4.png") center/cover no-repeat;
+  background: url("../assets/images/IMG_66584.png") center/cover no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1343,7 +1357,7 @@ body.menu-open .back-to-top {
 
 .entrance-title {
   font-size: clamp(18px, calc(1.7vw + 6px), 38px);
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.08em;
   color: #366a94;
 }
@@ -1351,7 +1365,7 @@ body.menu-open .back-to-top {
 .entrance-subtitle {
   margin-top: 0.5vw;
   font-family: "Josefin Sans", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-size: clamp(12px, calc(0.95vw + 6px), 24px);
   letter-spacing: 0.07em;
   color: #88a9b9;
@@ -1540,7 +1554,7 @@ body.menu-open .back-to-top {
 
 .meeting-title {
   font-size: clamp(18px, calc(1.7vw + 6px), 38px);
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.08em;
   color: #366a94;
 }
@@ -1548,7 +1562,7 @@ body.menu-open .back-to-top {
 .meeting-subtitle {
   margin-top: 0.5vw;
   font-family: "Josefin Sans", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-size: clamp(12px, calc(0.95vw + 6px), 24px);
   letter-spacing: 0.07em;
   color: #88a9b9;
@@ -1786,7 +1800,7 @@ body.menu-open .back-to-top {
 .process-card p {
   font-size: clamp(14px, calc(0.21vw + 12px), 16px);
   /* font-size: 15px; */
-  line-height: clamp(24px, calc(0.208vw + 22px), 26px);
+  line-height: clamp(28px, calc(0.52vw + 23px), 33px);
   letter-spacing: 0.1em;
   color: #00081a;
 }
@@ -1980,7 +1994,6 @@ body.menu-open .back-to-top {
   transform: translateY(0);
 }
 
-
 .hero-sp,
 .hero-sp-notice {
   display: none;
@@ -1992,23 +2005,6 @@ body.menu-open .back-to-top {
 
 .meeting-top-sp {
   display: none;
-}
-/* tablet landscape (ipad air 1180) */
-@media screen and (min-width: 1024px) and (max-width: 1180px) {
-  .facility-inner {
-    padding: clamp(80px, 8vw, 158px) clamp(20px, 11.46vw, 220px);
-  }
-  .facility-title {
-    text-align: center;
-  }
-  .about-intro {
-    padding-inline: 9vw;
-  }
-
-  .about-spec-section-inner {
-    padding-left: clamp(20px, 9vw, 220px);
-    padding-right: clamp(20px, 9vw, 220px);
-  }
 }
 
 /* =============================
@@ -2078,7 +2074,7 @@ body.menu-open .back-to-top {
 .delay-4 {
   transition-delay: 0.4s;
 }
-.delay-4 {
+.delay-5 {
   transition-delay: 0.5s;
 }
 
@@ -2420,7 +2416,6 @@ body.menu-open .back-to-top {
 /* Small Laptop */
 
 @media (max-width: 1439px) {
-
   .hero-description {
     font-size: clamp(15px, calc(0.4vw + 13px), 18px);
   }
@@ -2454,14 +2449,14 @@ body.menu-open .back-to-top {
   }
 
   .line-vertical {
-    bottom: 37.6%;
-    top: 25%;
+    bottom: 38.7%;
+    top: 26%;
   }
 
   .line-diagonal {
-    top: 19%;
-    bottom: 32%;
-    transform: rotate(-27deg);
+    top: 20%;
+    bottom: 33%;
+    transform: rotate(-29deg);
   }
 
   .line-horizontal {
@@ -2489,18 +2484,26 @@ body.menu-open .back-to-top {
     width: 48%;
     margin-left: auto;
   }
+
+  /* .entrance-content::after {
+    width: 7.5vw;
+  } */
+
+  .process-card p {
+    line-height: 26px;
+  }
 }
 
 @media (min-width: 1440px) and (max-width: 1536px) {
   /* laptop scale 125% */
   .line-vertical {
-    bottom: 37.6%;
-    top: 25.5%;
+    bottom: 38.6%;
+    top: 26.5%;
   }
 
   .line-diagonal {
-    bottom: 31%;
-    transform: rotate(-28deg);
+    bottom: 32.4%;
+    transform: rotate(-29deg);
     top: 20%;
   }
 
@@ -2520,7 +2523,65 @@ body.menu-open .back-to-top {
     top: calc(16.1vw - 0.3vw);
     left: calc(30vw - 0.3vw);
   }
+
+  .line-vertical {
+    bottom: 41%;
+    top: 25%;
+  }
+
+  .line-diagonal {
+    top: 19%;
+    bottom: 35.7%;
+    transform: rotate(-28deg);
+  }
 }
+
+/* @media screen and (min-width: 1181px) and (max-width: 1366px) {
+  .entrance-content::after {
+    width: 7.5vw;
+  }
+} */
+
+/* tablet landscape (ipad air 1180) */
+@media screen and (min-width: 1024px) and (max-width: 1180px) {
+  .facility-inner {
+    padding: clamp(80px, 8vw, 158px) clamp(20px, 11.46vw, 220px);
+  }
+  .facility-title {
+    text-align: center;
+  }
+  .about-intro {
+    padding-inline: 9vw;
+  }
+  .about-spec-section-inner {
+    padding-left: clamp(20px, 9vw, 220px);
+    padding-right: clamp(20px, 9vw, 220px);
+  }
+
+  .line-vertical {
+    bottom: 39%;
+    top: 26%;
+  }
+
+  .line-diagonal {
+    top: 20%;
+    bottom: 32.7%;
+    transform: rotate(-29deg);
+  }
+
+  .entrance-content::after {
+    width: 7.6vw;
+    top: 16vw;
+    left: 31vw;
+  }
+
+  .entrance-content::before {
+    top: calc(16.1vw - 0.3vw);
+    left: calc(31vw - 0.3vw);
+  }
+}
+
+/* Ipad Mini landscape */
 
 @media (max-width: 1024px) {
   .about-spec-section-inner,
@@ -2542,18 +2603,37 @@ body.menu-open .back-to-top {
     width: 80%;
   }
   .line-vertical {
-    bottom: 38%;
-    top: 25.7%;
+    bottom: 39.5%;
+    top: 26.7%;
   }
 
   .line-diagonal {
-    bottom: 32.6%;
+    bottom: 33.6%;
+    transform: rotate(-29.5deg);
+    top: 21%;
+  }
+
+  .line-horizontal {
+    top: 26%;
+  }
+
+  .entrance-content::after {
+    width: 8.6vw;
+    top: 19vw;
+    left: 36.4vw;
+  }
+  .entrance-content::before {
+    top: calc(19.1vw - 0.3vw);
+    left: calc(36vw - 0.3vw);
   }
 }
 
 /* Smarphone (android landscape) */
 
 @media (max-width: 920px) {
+  .logo img {
+    height: 25px;
+  }
   .entrance-content::after {
     width: 8.6vw;
     top: 19vw;
@@ -2566,13 +2646,13 @@ body.menu-open .back-to-top {
   }
 
   .line-vertical {
-    bottom: 37.9%;
+    bottom: 41%;
     top: 24.7%;
   }
-
   .line-diagonal {
-    bottom: 32.6%;
-    transform: rotate(-26.5deg);
+    top: 19%;
+    bottom: 35.6%;
+    transform: rotate(-28.5deg);
   }
 
   .line-horizontal {
@@ -2608,14 +2688,14 @@ body.menu-open .back-to-top {
     height: 0.15vw;
   }
   .line-vertical {
-    bottom: 38%;
-    top: 22.3%;
+    bottom: 39.5%;
+    top: 22.9%;
   }
 
   .line-diagonal {
-    bottom: 33.6%;
-    transform: rotate(-23.5deg);
-    top: 17%;
+    bottom: 34.6%;
+    transform: rotate(-25.5deg);
+    top: 18%;
   }
 
   .line-horizontal {
@@ -2916,11 +2996,21 @@ body.menu-open .back-to-top {
   }
 
   .line-vertical {
-    bottom: 38%;
-    top: 21.3%;
+    bottom: 39%;
+    top: 22.3%;
   }
   .line-horizontal {
-    top: 21%;
+    top: 22%;
+  }
+
+  .line-diagonal {
+    bottom: 34.6%;
+    transform: rotate(-24.4deg);
+    top: 17%;
+  }
+
+  .entrance-content::after {
+    width: 7.5vw;
   }
 }
 
@@ -3098,7 +3188,6 @@ body.menu-open .back-to-top {
     visibility: visible;
     pointer-events: auto;
   }
-
 
   .hero-sp {
     position: relative;
@@ -3312,7 +3401,7 @@ body.menu-open .back-to-top {
   }
 
   .about-spec-section {
-    background: url("../assets/images/Vector\ 43.png") center/cover no-repeat;
+    background: url("../assets/images/Vector43.png") center/cover no-repeat;
   }
 
   /* IMAGE */
@@ -3402,7 +3491,7 @@ body.menu-open .back-to-top {
   .spec-list ul {
     font-size: clamp(16px, 1.8vw, 18px);
     line-height: 36px;
-    letter-spacing: 0.02em;
+    letter-spacing: 0;
     font-weight: 400;
     background: none;
     padding: 0;
@@ -3410,6 +3499,7 @@ body.menu-open .back-to-top {
 
   .spec-list li {
     margin-bottom: 0;
+    letter-spacing: 0;
   }
 
   .spec-content::after {
@@ -3839,7 +3929,7 @@ body.menu-open .back-to-top {
   }
 
   .process {
-    padding: 60px 17px;
+    padding: 30px 17px 20px;
   }
 
   .process-sp {
