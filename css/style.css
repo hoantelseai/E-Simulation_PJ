@@ -2645,6 +2645,20 @@ body.menu-open .back-to-top {
     width: 61%;
   }
 
+  .exterior-hero {
+    padding-top: 60px;
+  }
+
+  .entrance {
+    padding-top: 45px;
+  }
+  .meeting {
+    padding-top: 45px;
+  }
+
+  .process {
+    padding-top: 45px;
+  }
   .entrance-content::before {
     top: calc(17.1vw - 0.3vw);
     left: calc(33.4vw - 0.3vw);
