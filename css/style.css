@@ -1280,6 +1280,7 @@ body.menu-open .back-to-top {
 .exterior {
   position: relative;
   background: #ffffff;
+  padding-bottom: 12vw;
 }
 
 /* ===== HERO BACKGROUND ===== */
@@ -1287,11 +1288,12 @@ body.menu-open .back-to-top {
 .exterior-hero {
   position: relative;
   background: url("../assets/images/IMG_66584.png") center/cover no-repeat;
+  height: clamp(420px, 42vw, 820px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-top: clamp(80px, 8vw, 100px);
+  /* padding-top: clamp(80px, 8vw, 100px); */
 }
 
 .exterior-overlay {
@@ -1300,7 +1302,11 @@ body.menu-open .back-to-top {
 }
 
 .exterior-hero-content {
-  position: relative;
+  /* position: relative; */
+  position: absolute;
+  top: 25%; /* điều chỉnh vị trí giữa */
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 2;
   text-align: center;
   color: #ffffff;
@@ -1325,7 +1331,12 @@ body.menu-open .back-to-top {
 /* ===== IMAGES ===== */
 
 .exterior-images {
-  position: relative;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10vw; /* phần chìm xuống dưới */
+
+  /* position: relative; */
   z-index: 3;
   width: 100%;
   max-width: 1920px;
@@ -1731,6 +1742,7 @@ body.menu-open .back-to-top {
 .process-title span {
   font-size: clamp(16px, calc(1.6vw + 4px), 36px);
   font-weight: 400;
+  margin-left: -0.5em;
 }
 
 .process-subtitle {
@@ -1810,9 +1822,27 @@ body.menu-open .back-to-top {
   background: #ffffff;
   padding: 1vw;
   border-radius: 8px;
+/* 
+   box-shadow:
+    0 8px 18px rgba(0,0,0,0.08),
+    0 2px 4px rgba(0,0,0,0.06); */
+
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 
-.process-card::after {
+.process-card::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #d9d9d9;
+  border-radius: 8px;
+  z-index: -1;
+}
+
+/* .process-card::after {
   content: "";
   position: absolute;
   left: 10%;
@@ -1823,7 +1853,7 @@ body.menu-open .back-to-top {
   filter: blur(18px);
   border-radius: 50%;
   z-index: -1;
-}
+} */
 
 .process-card h3 {
   font-size: clamp(15px, calc(0.93vw + 6px), 23.73px);
@@ -1920,7 +1950,7 @@ body.menu-open .back-to-top {
 }
 
 .footer-left {
-  margin-bottom: clamp(120px, 19.9vw, 380px);
+  margin-bottom: clamp(120px, 10.4vw, 200px);
 }
 
 .footer-inner {
@@ -1931,7 +1961,7 @@ body.menu-open .back-to-top {
 }
 
 .footer-logo {
-  width: clamp(180px, 12vw, 240px);
+  width: 90%;
   margin-bottom: clamp(20px, 2vw, 30px);
 }
 
@@ -2488,8 +2518,18 @@ body.menu-open .back-to-top {
     padding-top: 4.5vw;
   }
 
+  /* PC fix */
+  /* .exterior-hero {
+    height: none;
+  } */
+
   .exterior-images {
-    padding-top: 6vw;
+    /* padding-top: 6vw; */
+    bottom: -12vw;
+  }
+
+  .exterior {
+    padding-bottom: 16vw;
   }
 
   .entrance {
@@ -2598,6 +2638,10 @@ body.menu-open .back-to-top {
   .process-card p {
     line-height: 26px;
   }
+
+  .footer-logo {
+    width: 80%;
+}
 }
 
 @media (min-width: 1440px) and (max-width: 1536px) {
@@ -2806,6 +2850,10 @@ body.menu-open .back-to-top {
   .entrance-content::before {
     top: calc(19.1vw - 0.3vw);
     left: calc(38vw - 0.3vw);
+  }
+
+  .exterior-images {
+    bottom: -17vw;
   }
 }
 
@@ -3256,6 +3304,10 @@ body.menu-open .back-to-top {
   .entrance-content::after {
     width: 7.5vw;
   }
+
+  .exterior-images {
+    bottom: -11vw;
+  }
 }
 
 /* Ipad Air Portrait */
@@ -3380,6 +3432,10 @@ body.menu-open .back-to-top {
     letter-spacing: 0.02em;
     color: #00081a;
   }
+
+      .exterior-images {
+        bottom: -11vw;
+    }
 }
 
 /* Mobile */
@@ -4003,14 +4059,32 @@ body.menu-open .back-to-top {
     display: none;
   }
 
+  .exterior {
+    padding-bottom: 60px;
+  }
+
+  .exterior-hero-content {
+    position: relative;
+    padding: 20px 0;
+    top: unset;
+    left: unset;
+    transform: none;
+  }
+
+  .exterior-hero {
+    height: auto;
+  }
+
   .exterior-images {
+    position: relative;
+    bottom: 0;
     grid-template-columns: 1fr;
     row-gap: 24px;
 
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 17px;
-    padding-bottom: 40px;
+    /* padding-bottom: 40px; */
   }
 
   .exterior-description {
@@ -4027,7 +4101,7 @@ body.menu-open .back-to-top {
    Entrance - Smartphone
 ============================= */
   .entrance {
-    margin-top: 80px;
+    /* margin-top: 80px; */
     padding: 27px 17px;
     background-image: none;
     background-color: #dbeaf1;
