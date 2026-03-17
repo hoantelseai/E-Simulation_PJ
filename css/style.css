@@ -3216,63 +3216,11 @@ body.menu-open .back-to-top {
     background-image: url("../assets/images/ipad-bg-2.png");
     opacity: 0;
   }
-  /* 
-  .hero-sp-inner {
-    position: relative;
-    z-index: 2;
-    padding: 90px 17px clamp(5px, 2vw, 7.5px);
-  }
-  .hero-sp-subtitle {
-    font-size: clamp(14px, 5.669vw, 21.26px);
-    line-height: clamp(16px, 5.6vw, 21px);
-    letter-spacing: 0.08em;
-    font-weight: 700;
-  }
-  .hero-sp-tagline {
-    font-size: clamp(10px, 3.2vw, 12px);
-    line-height: clamp(8px, 2.64vw, 9.9px);
-    letter-spacing: 0.02em;
-    margin-top: 2vw;
-  }
-  .hero-sp-title {
-    font-size: 35px;
-    line-height: clamp(32px, 13.867vw, 52px);
-    font-weight: 600;
-    margin-top: clamp(14px, 6vw, 22.5px);
-  }
-  .hero-sp-product {
-    margin-top: clamp(14px, 6vw, 22.5px);
-  }
-  .hero-sp-type {
-    font-size: clamp(12px, 4.267vw, 16px);
-    line-height: clamp(30px, 12.373vw, 46.4px);
-    letter-spacing: 0.02em;
-  }
-  .hero-sp-type-below {
-    font-size: clamp(10px, 3.2vw, 12px);
-    letter-spacing: 0.08em;
-  }
-  .hero-sp-name {
-    font-size: clamp(20px, 8.288vw, 31.08px);
-    line-height: clamp(24px, 8.107vw, 30.4px);
-    letter-spacing: 0.03em;
-    font-weight: 900;
-  }
-  .hero-sp-desc {
-    font-size: clamp(12px, 4.267vw, 16px);
-    line-height: clamp(20px, 7.467vw, 28px);
-    letter-spacing: 0.03em;
-    margin-top: clamp(14px, 6vw, 22.5px);
-    padding-bottom: clamp(10px, 4vw, 15px);
-  } */
 
   .hero-sp-inner {
     display: none;
   }
   .hero-sp-cta {
-    /* display: flex;
-    width: 100%; */
-
     position: fixed;
     bottom: 0;
     left: 0;
@@ -3391,7 +3339,6 @@ body.menu-open .back-to-top {
     background: #fff;
     padding: 20px;
     border-radius: 10px;
-    /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); */
 
     position: relative;
     width: 85%;
@@ -3456,8 +3403,35 @@ body.menu-open .back-to-top {
     height: 308px;
   }
 
+  .exterior-title {
+    font-size: 18px;
+  }
+
+  .entrance-title {
+    font-size: 18px;
+  }
+
+  .meeting-title {
+    font-size: 18px;
+  }
+
+  .contact-title {
+    font-size: 18px;
+  }
+
+  .process-title {
+    font-size: 18px;
+  }
+
+  .news-title {
+    font-size: 18px;
+  }
+
   .meeting {
     padding-top: 20px;
+  }
+  .news-item {
+    display: block;
   }
   .news {
     padding-top: 43px;
