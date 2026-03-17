@@ -977,9 +977,9 @@ body.menu-open .back-to-top {
 }
 
 .video-overlay span {
-  border: 1px solid #fff;
+  border: 1px solid rgba(255, 255, 255, 0.6);
   padding: 1vw 3vw;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.6);
   font-size: clamp(18px, 1.6vw, 28px);
   font-size: clamp(14px, calc(0.6vw + 8px), 18px);
   letter-spacing: 0.1em;
@@ -1380,7 +1380,7 @@ body.menu-open .back-to-top {
   text-align: right;
   font-size: 16px;
   line-height: 1.75;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.1em;
   color: #151515;
 }
 
@@ -1481,7 +1481,7 @@ body.menu-open .back-to-top {
   margin-top: clamp(24px, 2vw, 40px);
   font-size: clamp(16px, calc(0.22vw + 14px), 18px);
   line-height: 1.75;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.14em;
   color: #00081a;
 }
 
@@ -1655,7 +1655,7 @@ body.menu-open .back-to-top {
   margin-left: auto;
   font-size: clamp(16px, calc(0.22vw + 14px), 18px);
   line-height: 1.75;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.14em;
   color: #363636;
   text-align: left;
   width: 50%;
@@ -1698,7 +1698,7 @@ body.menu-open .back-to-top {
   margin-top: clamp(16px, 1.5vw, 24px);
   font-size: clamp(16px, calc(0.22vw + 14px), 18px);
   line-height: 1.75;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.14em;
   color: #00081a;
 }
 /* =============================
@@ -2568,6 +2568,21 @@ body.menu-open .back-to-top {
     height: 0.15vw;
   }
 
+  .exterior-description {
+    letter-spacing: 0.04em;
+  }
+
+  .entrance-description {
+    letter-spacing: 0.04em;
+  }
+
+  .meeting-top-description {
+    letter-spacing: 0.04em;
+  }
+
+  .meeting-item figcaption {
+    list-style: 0.04em;
+  }
   .meeting {
     padding-top: 46px;
   }
@@ -2976,8 +2991,28 @@ body.menu-open .back-to-top {
 /* Ipad Mini Portrait (768px) */
 
 @media (min-width: 768px) and (max-width: 819px) {
+  .header-sp-inner {
+    height: 53px;
+  }
   .hero {
     height: auto;
+    padding-top: 104px;
+  }
+
+  .hero-tagline {
+    margin-bottom: 54px;
+  }
+
+  .hero-description {
+    margin-bottom: 50px;
+  }
+
+  .machine-name {
+    font-size: 45px;
+  }
+
+  .about-spec-section-inner {
+    gap: 20px;
   }
   .about-spec-section-inner,
   .cta-consult,
@@ -2994,19 +3029,46 @@ body.menu-open .back-to-top {
     padding-inline: 30px;
   }
 
+  .exterior-hero-content {
+    top: 17%;
+  }
   .entrance {
     padding-bottom: 48px;
+    margin-top: 35px;
+    padding-top: 20px;
+  }
+
+  .test-label {
+    font-size: 18px;
+  }
+
+  .test-title {
+    font-size: 42.3px;
   }
   .test-video-hero {
-    padding-top: 20px;
+    padding-top: 15px;
+    padding-bottom: 75px;
   }
 
   .test-video-cards {
     margin-bottom: 80px;
   }
 
+  .products {
+    padding-top: 20px;
+  }
+
   .cta-consult {
     padding-top: 51px;
+  }
+  .btn-icon {
+    width: 19px;
+    height: 19px;
+  }
+
+  .btn-consult {
+    height: 48px;
+    font-size: 17.21px;
   }
   .back-to-top {
     position: fixed;
@@ -3014,7 +3076,7 @@ body.menu-open .back-to-top {
   }
 
   .about-spec-section-inner {
-    padding: 50px 20px;
+    padding: 25px 20px;
   }
   .about-intro {
     padding: 50px 33px;
@@ -3046,7 +3108,11 @@ body.menu-open .back-to-top {
   }
 
   .test-video-inner {
-    width: 67%;
+    width: 78%;
+  }
+
+  .products-title {
+    font-size: 18px;
   }
   .header-pc {
     display: none;
@@ -3244,6 +3310,14 @@ body.menu-open .back-to-top {
     letter-spacing: 0.01em;
   }
 
+  .spec-image {
+    height: 426px;
+    min-width: unset;
+  }
+
+  .spec-eyebrow {
+    margin-bottom: 0;
+  }
   .facility-bg {
     display: none;
   }
@@ -3277,38 +3351,39 @@ body.menu-open .back-to-top {
     display: flex;
     justify-content: center;
     margin-bottom: 0;
+    z-index: 1;
   }
 
   .process-sp-vector {
-    height: 18.667vw;
-    width: 90%;
+    height: 49px;
+    width: 100%;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
   }
 
   .vector-1 {
-    background-image: url(../assets/images/Vector-sp-1.png);
+    background-image: url(../assets/images/Vector1_ipad.png);
   }
   .vector-2 {
-    background-image: url(../assets/images/Vector-sp-2.png);
+    background-image: url(../assets/images/Vector2_ipad.png);
   }
   .vector-3 {
-    background-image: url(../assets/images/Vector-sp-3.png);
+    background-image: url(../assets/images/Vector3_ipad.png);
   }
   .vector-4 {
-    background-image: url(../assets/images/Vector-sp-4.png);
+    background-image: url(../assets/images/Vector4_ipad.png);
   }
   .vector-5 {
-    background-image: url(../assets/images/Vector-sp-5.png);
+    background-image: url(../assets/images/Vector5_ipad.png);
   }
 
   .process-sp-step {
     position: absolute;
-    left: 6vw;
-    top: 40%;
+    left: 3vw;
+    top: 48%;
     transform: translateY(-50%);
-    width: 9.5vw;
+    width: 8.5vw;
   }
 
   /* Card */
@@ -3316,12 +3391,21 @@ body.menu-open .back-to-top {
     background: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); */
 
     position: relative;
     width: 85%;
-    margin: -7.2vw auto 0;
+    margin: -1.2vw auto 0;
     z-index: 2;
+  }
+
+  .process-sp-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    z-index: -1;
   }
 
   .process-sp-card h3 {
@@ -3365,15 +3449,31 @@ body.menu-open .back-to-top {
     height: 0.6vw;
   }
   .exterior-images {
-    bottom: -11vw;
+    bottom: -15vw;
   }
 
+  .exterior-hero {
+    height: 308px;
+  }
+
+  .meeting {
+    padding-top: 20px;
+  }
+  .news {
+    padding-top: 43px;
+    padding-bottom: 50px;
+  }
+  /* 
+  .footer-info .sp-br {
+ display: block;
+  } */
   .footer-left {
-    margin-bottom: 200px;
+    margin-bottom: 160px;
   }
 
   .site-footer {
     padding-bottom: 100px;
+    padding-top: 39px;
   }
 }
 
