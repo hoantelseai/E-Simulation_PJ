@@ -893,7 +893,7 @@ body.menu-open .back-to-top {
 /* Hero area */
 .test-video-hero {
   position: relative;
-  background: url("../assets/images/IMG_12901.png") center/cover no-repeat;
+  background: url("../assets/images/section-video-bg.jpg") center/cover no-repeat;
   padding: clamp(40px, 3.33vw, 64px) clamp(20px, 11.46vw, 220px)
     clamp(100px, 16.2vw, 307px);
   color: #fff;
@@ -1248,7 +1248,7 @@ body.menu-open .back-to-top {
 .facility-bg {
   width: clamp(220px, 18vw, 341px);
   height: clamp(160px, 14vw, 249px);
-  background: url("../assets/images/a1.png") no-repeat center/contain;
+  background: url("../assets/images/facility-illust.png") no-repeat center/contain;
   flex-shrink: 0;
 }
 /* =============================
@@ -1265,7 +1265,7 @@ body.menu-open .back-to-top {
 
 .exterior-hero {
   position: relative;
-  background: url("../assets/images/IMG_66584.png") center/cover no-repeat;
+  background: url("../assets/images/facility-bg.png") center/cover no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -4168,7 +4168,7 @@ body.menu-open .back-to-top {
   }
 
   .exterior-hero {
-    background: url("../assets/images/sp.png") center/cover no-repeat;
+    background: url("../assets/images/facility-bg-sp.png") center/cover no-repeat;
     padding-top: 60px;
     height: auto;
   }
