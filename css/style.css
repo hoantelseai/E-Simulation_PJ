@@ -465,11 +465,26 @@ body.menu-open .back-to-top {
 }
 
 .hero-notice p {
-  color: #333;
+  color: #151515;
   font-size: clamp(12px, calc(0.07vw + 11.8px), 13px);
   font-weight: 400;
 }
 
+.hero-notice-link {
+  display: block;
+  color: #151515;
+  text-decoration: none;
+  font-size: clamp(12px, calc(0.07vw + 11.8px), 13px);
+  font-weight: 400;
+}
+
+.hero-notice-link time {
+  margin-right: 0.5em;
+}
+
+#news {
+  scroll-margin-top: 50px; /* chỉnh theo header */
+}
 /* =============================
    About Section
 =============================  */
@@ -3172,8 +3187,27 @@ body.menu-open .back-to-top {
   .hero-sp,
   .hero-sp-notice {
     display: block;
-    color: #00081a;
+    color: #202020;
   }
+  .hero-sp-notice-link {
+    display: block;
+    text-decoration: none;
+    color: #00081A;
+    font-size: 14px;
+  }
+
+  .hero-sp-notice-link .label {
+    margin-right: 0.5em;
+  }
+
+  /* .hero-sp-notice-link time {
+  font-weight: 400;
+} */
+
+  .hero-sp-notice-link .text {
+    display: inline;
+  }
+
   .sp-menu-header {
     display: flex;
     justify-content: space-between;
@@ -3623,6 +3657,27 @@ body.menu-open .back-to-top {
   .hero-sp-notice {
     display: block;
     color: #00081a;
+  }
+
+  .hero-sp-notice-link {
+    display: block;
+    text-decoration: none;
+    color: #00081a;
+    /* font-size: 14px; */
+    /* line-height: 1.6; */
+  }
+
+  .hero-sp-notice-link .label {
+    /* font-weight: 600; */
+    margin-right: 0.5em;
+  }
+
+  /* .hero-sp-notice-link time {
+  font-weight: 400;
+} */
+
+  .hero-sp-notice-link .text {
+    display: inline;
   }
 
   .sp-menu-header {
@@ -4521,11 +4576,13 @@ body.menu-open .back-to-top {
     display: block;
     font-size: 15px;
     margin-bottom: 12px;
+    color: #202020;
   }
 
   .news-text {
     font-size: 15px;
     line-height: 1.8;
+    color: #202020;
   }
 
   .back-to-top {
