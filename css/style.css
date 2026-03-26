@@ -478,7 +478,7 @@ body.menu-open .back-to-top {
 }
 
 #news {
-  scroll-margin-top: 50px; 
+  scroll-margin-top: 50px;
 }
 /* =============================
    About Section
@@ -831,7 +831,7 @@ body.menu-open .back-to-top {
 
 .btn-icon {
   position: absolute;
-  right: 16px; 
+  right: 16px;
   top: 50%;
   transform: translateY(-50%);
 
@@ -893,7 +893,8 @@ body.menu-open .back-to-top {
 /* Hero area */
 .test-video-hero {
   position: relative;
-  background: url("../assets/images/section-video-bg.jpg") center/cover no-repeat;
+  background: url("../assets/images/section-video-bg.jpg") center/cover
+    no-repeat;
   padding: clamp(40px, 3.33vw, 64px) clamp(20px, 11.46vw, 220px)
     clamp(100px, 16.2vw, 307px);
   color: #fff;
@@ -1248,7 +1249,8 @@ body.menu-open .back-to-top {
 .facility-bg {
   width: clamp(220px, 18vw, 341px);
   height: clamp(160px, 14vw, 249px);
-  background: url("../assets/images/facility-illust.png") no-repeat center/contain;
+  background: url("../assets/images/facility-illust.png") no-repeat
+    center/contain;
   flex-shrink: 0;
 }
 /* =============================
@@ -1407,8 +1409,18 @@ body.menu-open .back-to-top {
 .entrance-left-bg {
   background: #ffffff;
   padding: 20px 60px 20px 40px;
+  position: relative;
 }
 
+.entrance-lines-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+}
 .entrance-left img {
   width: 85%;
   margin: 0 auto;
@@ -1448,7 +1460,7 @@ body.menu-open .back-to-top {
 
 /* ===== Connector Line ===== */
 
-.entrance-content::after {
+/* .entrance-content::after {
   content: "";
   position: absolute;
 
@@ -1461,10 +1473,10 @@ body.menu-open .back-to-top {
   background: #5f8faa;
 
   z-index: 100;
-}
+} */
 
 /* Dots */
-.entrance-content::before {
+/* .entrance-content::before {
   content: "";
   position: absolute;
 
@@ -1478,7 +1490,7 @@ body.menu-open .back-to-top {
   border-radius: 50%;
 
   z-index: 200;
-}
+} */
 
 /* =============================
    Meeting Section
@@ -1496,7 +1508,47 @@ body.menu-open .back-to-top {
   margin: 0 auto;
 }
 
-.meeting-lines {
+.meeting-top-image {
+  position: relative;
+  overflow: visible;
+}
+
+.meeting-top-image img {
+  width: 100%;
+  display: block;
+}
+
+/* SVG overlay khớp hoàn toàn với ảnh */
+.meeting-lines-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.meeting-content {
+  overflow: visible;
+}
+
+.meeting-top {
+  overflow: visible;
+}
+
+.meeting-top-image {
+  overflow: visible;
+}
+
+.meeting-lines-svg {
+  overflow: visible;
+}
+
+/* Xóa toàn bộ .meeting-lines, .line, .line-vertical, 
+   .line-horizontal, .line-diagonal cũ */
+
+/* .meeting-lines {
   position: absolute;
   top: 0;
   left: 0;
@@ -1562,7 +1614,7 @@ body.menu-open .back-to-top {
   top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
-}
+} */
 
 .meeting-header {
   text-align: center;
@@ -1594,6 +1646,7 @@ body.menu-open .back-to-top {
 /* image wrapper */
 .meeting-top-image {
   position: relative;
+  overflow: visible;
 }
 
 .meeting-top-image img {
@@ -2494,7 +2547,7 @@ body.menu-open .back-to-top {
     padding-top: 46px;
   }
 
-  .entrance-content::before {
+  /* .entrance-content::before {
     top: calc(16.1vw - 0.3vw);
     left: calc(32vw - 0.3vw);
   }
@@ -2504,7 +2557,7 @@ body.menu-open .back-to-top {
     left: 31.8vw;
     width: 6vw;
     height: 0.15vw;
-  }
+  } */
 
   .exterior-description {
     letter-spacing: 0.04em;
@@ -2672,18 +2725,18 @@ body.menu-open .back-to-top {
   .process {
     padding-top: 45px;
   }
-  .entrance-content::before {
+  /* .entrance-content::before {
     top: calc(17.1vw - 0.3vw);
     left: calc(33.4vw - 0.3vw);
   }
 
   .entrance-content::after {
     left: 33.5vw;
-  }
+  } */
 }
 
 @media (max-width: 1200px) {
-  .entrance-content::after {
+  /* .entrance-content::after {
     width: 7.6vw;
     top: 16vw;
     left: 30.1vw;
@@ -2703,7 +2756,7 @@ body.menu-open .back-to-top {
     top: 19%;
     bottom: 35.7%;
     transform: rotate(-28deg);
-  }
+  } */
 }
 
 /* tablet landscape (ipad air 1180) */
@@ -2735,7 +2788,7 @@ body.menu-open .back-to-top {
     padding-right: clamp(20px, 9vw, 220px);
   }
 
-  .line-vertical {
+  /* .line-vertical {
     bottom: 39%;
     top: 26%;
   }
@@ -2755,7 +2808,7 @@ body.menu-open .back-to-top {
   .entrance-content::before {
     top: calc(16.1vw - 0.3vw);
     left: calc(31vw - 0.3vw);
-  }
+  } */
 }
 
 /* Ipad Mini landscape */
@@ -2783,11 +2836,10 @@ body.menu-open .back-to-top {
     height: 25px;
   }
 
-
   .test-video-inner {
     width: 80%;
   }
-  .line-vertical {
+  /* .line-vertical {
     bottom: 39.5%;
     top: 26.7%;
   }
@@ -2810,7 +2862,7 @@ body.menu-open .back-to-top {
   .entrance-content::before {
     top: calc(19.1vw - 0.3vw);
     left: calc(38vw - 0.3vw);
-  }
+  } */
 
   .exterior-images {
     bottom: -17vw;
@@ -2823,7 +2875,7 @@ body.menu-open .back-to-top {
   .logo img {
     height: 25px;
   }
-  .entrance-content::after {
+  /* .entrance-content::after {
     width: 8.6vw;
     top: 19vw;
     left: 36vw;
@@ -2846,8 +2898,7 @@ body.menu-open .back-to-top {
 
   .line-horizontal {
     top: 25%;
-  }
-
+  } */
 }
 /* Ipad Air Portrait*/
 @media (max-width: 900px) {
@@ -2870,7 +2921,7 @@ body.menu-open .back-to-top {
   .entrance-left img {
     width: 95%;
   }
-
+/* 
   .entrance-content::before {
     top: 19.5vw;
     left: 35.5vw;
@@ -2897,8 +2948,7 @@ body.menu-open .back-to-top {
 
   .line-horizontal {
     top: 22%;
-  }
-
+  } */
 }
 
 @media (max-width: 768px) and (orientation: landscape) {
@@ -3093,7 +3143,7 @@ body.menu-open .back-to-top {
   .hero-sp-notice-link {
     display: block;
     text-decoration: none;
-    color: #00081A;
+    color: #00081a;
     font-size: 14px;
   }
 
@@ -3300,7 +3350,7 @@ body.menu-open .back-to-top {
     color: #00081a;
   }
 
-  .line-vertical {
+  /* .line-vertical {
     bottom: 39%;
     top: 22.3%;
   }
@@ -3312,8 +3362,8 @@ body.menu-open .back-to-top {
     bottom: 34.6%;
     transform: rotate(-24.4deg);
     top: 17%;
-  }
-
+  } */
+/* 
   .entrance-content::after {
     width: 7.5vw;
     top: 20.7vw;
@@ -3325,7 +3375,7 @@ body.menu-open .back-to-top {
     left: 38.5vw;
     width: 0.6vw;
     height: 0.6vw;
-  }
+  } */
   .exterior-images {
     bottom: -15vw;
   }
@@ -4168,7 +4218,8 @@ body.menu-open .back-to-top {
   }
 
   .exterior-hero {
-    background: url("../assets/images/facility-bg-sp.png") center/cover no-repeat;
+    background: url("../assets/images/facility-bg-sp.png") center/cover
+      no-repeat;
     padding-top: 60px;
     height: auto;
   }
